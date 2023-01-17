@@ -47,6 +47,7 @@ export default {
             accor: true,
         };
     },
+
     // data를 쓰고 있으면 this.뭐라고 적어야함
     methods: {
         accordion: function () {

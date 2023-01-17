@@ -81,7 +81,7 @@ swiper-slide img {
 <template>
     <div class="section6">
         <div class="sec_wrap b_black p50all">
-            <h2 class="beige">CLONE-CODING / PROJECTS</h2>
+            <h2 class="beige">CLONE-CODING / TOY-PROJECT</h2>
             <div class="content_wrap">
                 <div></div>
                 <div></div>
@@ -93,20 +93,20 @@ swiper-slide img {
 </template>
 <script></script>
 <style scoped>
-.sec_wrap{
+.sec_wrap {
     display: block;
-    height:50vh;
+    height: 50vh;
 }
-.content_wrap{
+.content_wrap {
     display: flex;
-    width:100%;
-    gap:50px;
-    padding-top:50px;
+    width: 100%;
+    gap: 50px;
+    padding-top: 50px;
     box-sizing: border-box;
 }
-.content_wrap>div{
-    flex:1;
-    height:calc(50vh - 200px);
+.content_wrap > div {
+    flex: 1;
+    height: calc(50vh - 200px);
     box-sizing: border-box;
     background-color: aqua;
 }
