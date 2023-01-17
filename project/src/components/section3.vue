@@ -1,5 +1,5 @@
 <template>
-    <div class="section3" id="projects">
+    <div class="section3">
         <div class="sec_wrap">
             <div class="b_beige p50all">
                 <div class="content1" v-if="accor == true">

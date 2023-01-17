@@ -1,10 +1,10 @@
 <template>
-    <div class="section5" id="contact">
+    <div class="section5" id="projects">
         <div class="sec_wrap">
             <div class="left b_blue">
                 <div></div>
             </div>
-            <div class="right p50all">
+            <div class="right p50all b_beige">
                 <div></div>
                 <div></div>
                 <div></div>
@@ -29,7 +29,6 @@
 }
 .right {
     height: fit-content;
-    background-color: aquamarine;
 }
 .right > div {
     width: 100%;

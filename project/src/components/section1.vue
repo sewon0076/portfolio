@@ -102,9 +102,15 @@ export default {
 }
 .circle h3 {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate3d(-50%, -50%, 0);
+    width:100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    line-height: 100%;
 }
 .left {
     display: flex;
