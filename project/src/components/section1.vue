@@ -15,18 +15,18 @@
             <div class="p50all b_black">
                 <div class="circle_wrap">
                     <div class="circle">
-                        <div class="b_beige">
+                        <div class="b_beige b1">
                             <h3 v-on:click="goSection" data-target="intro">INTRODUCTION</h3>
                         </div>
                     </div>
                     <div class="circle">
-                        <div class="b_yellow"><h3 v-on:click="goSection" data-target="projects">PROJECTS</h3></div>
+                        <div class="b_red"><h3 v-on:click="goSection" data-target="projects">PROJECTS</h3></div>
                     </div>
                     <div class="circle">
-                        <div class="b_red"><h3 v-on:click="goSection" data-target="experiences">EXPEREIENCES</h3></div>
+                        <div class="b_blue"><h3 v-on:click="goSection" data-target="experiences">EXPEREIENCES</h3></div>
                     </div>
                     <div class="circle">
-                        <div class="b_green"><h3 v-on:click="goSection" data-target="contact">CONTACT</h3></div>
+                        <div class="b_beige b2"><h3 v-on:click="goSection" data-target="contact">CONTACT</h3></div>
                     </div>
                 </div>
             </div>
@@ -99,11 +99,18 @@ export default {
     padding-top: 100%;
     box-sizing: border-box;
     border-radius: 50%;
+    background-size: 77%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.circle > div:hover {
+    transform: rotate(360deg);
+    transition: 3s;
 }
 .circle h3 {
     position: absolute;
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -116,5 +123,18 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+.b_blue {
+    background-image: url(../../public/img/poly_rec_beige.png);
+}
+.circle > .b_beige.b1 {
+    background-image: url(../../public/img/twist_diamond.png);
+    background-size: 82%;
+}
+.b_beige.b2 {
+    background-image: url(../../public/img/poly9_yellow.png);
+}
+.b_red {
+    background-image: url(../../public/img/poly_line_beige.png);
 }
 </style>

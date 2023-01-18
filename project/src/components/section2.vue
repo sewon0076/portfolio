@@ -8,7 +8,13 @@
                     <h1 class="bottom">NEVER, GIVE UP</h1>
                 </div>
             </div>
-            <div class="b_beige"></div>
+            <div class="b_beige p50all">
+                <div class="portrait"><img src="../../public/img/portrait.png" alt="" /></div>
+                <div class="b_green">
+                    <h3 class="beige">RESUME</h3>
+                    <div class="arrow-next"></div>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -30,5 +36,42 @@ h1.middle {
 }
 h1.bottom {
     text-align: right;
+}
+.b_beige {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.portrait {
+    width: 60%;
+}
+.portrait > img {
+    width: 100%;
+}
+.b_green {
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 40px;
+}
+.arrow-next {
+    position: relative;
+    width: 25px;
+    height: 25px;
+}
+
+.arrow-next::after {
+    position: absolute;
+    left: 2.5px;
+    top: 5px;
+    content: "";
+    width: 12.5px; /* 사이즈 */
+    height: 12.5px; /* 사이즈 */
+    border-top: 3px solid #f3ede4; /* 선 두께 */
+    border-right: 3px solid #f3ede4; /* 선 두께 */
+    transform: rotate(45deg); /* 각도 */
 }
 </style>

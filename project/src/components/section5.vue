@@ -4,40 +4,27 @@
             <div class="left b_blue">
                 <div v-bind:class="{ fixed: change }">
                     <img src="../../public/img/project_title_w.png" alt="" />
-                    <!-- <div class="title_wrap">
-                        <img src="../../public/img/poly_rec_beige.png" alt="" />
-                        <h2>P</h2>
-                    </div>
-                    <div class="title_wrap">
-                        <img src="../../public/img/poly_rec_beige.png" alt="" />
-                        <h2>R</h2>
-                    </div>
-                    <div class="title_wrap">
-                        <img src="../../public/img/poly_rec_beige.png" alt="" />
-                        <h2>O</h2>
-                    </div>
-                    <div class="title_wrap">
-                        <img src="../../public/img/poly_rec_beige.png" alt="" />
-                        <h2>J</h2>
-                    </div>
-                    <div class="title_wrap">
-                        <img src="../../public/img/poly9_black.png" alt="" />
-                        <h2 class="beige">E</h2>
-                    </div>
-                    <div class="title_wrap">
-                        <img src="../../public/img/poly_rec_beige.png" alt="" />
-                        <h2>C</h2>
-                    </div>
-                    <div class="title_wrap">
-                        <img src="../../public/img/poly_rec_beige.png" alt="" />
-                        <h2>T</h2>
-                    </div> -->
                 </div>
             </div>
             <div class="right p50all b_beige">
-                <div></div>
-                <div></div>
-                <div></div>
+                <div>
+                    <div class="view b_beige">
+                        <div class="b_blue"></div>
+                        <h3>VIEW WEBSITE</h3>
+                    </div>
+                </div>
+                <div>
+                    <div class="view b_beige">
+                        <div class="b_blue"></div>
+                        <h3>VIEW WEBSITE</h3>
+                    </div>
+                </div>
+                <div>
+                    <div class="view b_beige">
+                        <div class="b_blue"></div>
+                        <h3>VIEW WEBSITE</h3>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -64,7 +51,7 @@ export default {
             if (window.scrollY > 3 * vh && window.scrollY < 4 * vh) {
                 this.change = true;
                 let num = window.scrollY / vh;
-                console.log("start" + num);
+                // console.log("start" + num);
             } else if (window.scrollY <= 3 * vh || window.scrollY >= 4 * vh) {
                 this.change = false;
             }
@@ -88,33 +75,7 @@ export default {
 .left > div > img {
     width: 100%;
 }
-/* .left > div {
-    position: absolute;
-    top: 200px;
-    left: 0%;
-    transform: translate3d(0, -50%, 0);
-    width: 50vw;
-    box-sizing: border-box;
-    height: auto;
-    display: flex;
-} */
-/* .title_wrap {
-    position: relative;
-    width: 14%;
-    height: fit-content;
-    padding: 0 10px;
-    box-sizing: border-box;
-}
-.title_wrap > img {
-    width: 100%;
-}
-.title_wrap h2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate3d(-50%, -50%, 0);
-    font-weight: 900;
-} */
+
 .left > .fixed {
     position: fixed;
     top: 200px;
@@ -125,11 +86,32 @@ export default {
     height: fit-content;
 }
 .right > div {
+    position: relative;
     width: 100%;
     padding-top: 53.125%;
     background-color: lightblue;
 }
 .right > div:nth-child(2) {
     margin: 50px 0;
+}
+.view {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    width: fit-content;
+}
+.view .b_blue {
+    width: 50px;
+    height: 50px;
+    background-image: url(../../public/img/poly9_beige.png);
+    background-size: 80%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.view h3 {
+    padding: 0 25px;
+    box-sizing: border-box;
+    line-height: 50px;
 }
 </style>

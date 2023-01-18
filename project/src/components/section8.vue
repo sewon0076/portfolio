@@ -9,69 +9,104 @@
                     <p class="beige">INSTAGRAM : @31_luminous</p>
                 </div>
             </div>
-            <div class="right p50all b_yellow">
-                <h2>CONTACT</h2>
-                <div>
-                    <div class="c_circle" id="c1"><img src="../../public/img/Asset1.png" alt=""></div>
-                    <div class="c_circle" id="c2"><img src="../../public/img/Asset1.png" alt=""></div>
-                    <div class="c_circle" id="c3"><img src="../../public/img/Asset1.png" alt=""></div>
-                    <div class="c_circle" id="c4"><img src="../../public/img/Asset1.png" alt=""></div>
-                    <div class="c_circle" id="c5"><img src="../../public/img/Asset1.png" alt=""></div>
-                    <div class="c_circle" id="c6"><img src="../../public/img/Asset1.png" alt=""></div>
-                    <div class="c_circle" id="c7"><img src="../../public/img/Asset1.png" alt=""></div>
-                    <div class="c_circle" id="c8"><img src="../../public/img/Asset1.png" alt=""></div>
-                    <div class="c_circle" id="c9"><img src="../../public/img/Asset1.png" alt=""></div>
+            <div class="right b_yellow">
+                <h2 class="p50all">CONTACT</h2>
+                <div class="circle_wrap1">
+                    <div class="c_circle1" id="c2"><img src="../../public/img/Asset8.png" alt="" /></div>
+                    <div class="c_circle1" id="c3"><img src="../../public/img/Asset5.png" alt="" /></div>
+                    <div class="c_circle1" id="c4"><img src="../../public/img/Asset22.png" alt="" /></div>
+
+                    <div class="c_circle1" id="c6"><img src="../../public/img/Asset17.png" alt="" /></div>
+                    <div class="c_circle1" id="c7"><img src="../../public/img/Asset1.png" alt="" /></div>
+
+                    <div class="c_circle1" id="c9"><img src="../../public/img/Asset9.png" alt="" /></div>
+                </div>
+                <div class="circle_wrap">
+                    <div class="c_circle" id="c1"><img src="../../public/img/Asset21.png" alt="" /></div>
+
+                    <div class="c_circle2" id="c5"><img src="../../public/img/Asset18.png" alt="" /></div>
+
+                    <div class="c_circle2" id="c8"><img src="../../public/img/Asset10.png" alt="" /></div>
+
+                    <div class="c_circle" id="c10"><img src="../../public/img/Asset11.png" alt="" /></div>
                 </div>
             </div>
         </div>
     </div>
 </template>
-<script src="../../public/js/contact.js"></script>
 <style scoped>
-.sec_wrap>div{
+.sec_wrap > div {
     height: 50vh;
 }
-.left p{
+.left p {
     font-weight: 800;
 }
-.left>div{
-    width:100%;
-    height:100%;
+.left > div {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    gap:12.5px;
-
+    gap: 12.5px;
 }
-.right{
-    position: relatives;
-}
-.right{
+.right {
     position: relative;
+    overflow: hidden;
 }
-.right>div{
+.right > div {
     position: absolute;
-    top:0;
-    right:0;
-    width:100%;
-    height:100%;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
 }
-.c_circle{
-    width:100px;
-    height:fit-content;
+.right > .circle_wrap {
+    top: -260px;
 }
-.c_circle:nth-child(3n-1){
-    margin-top:40px;
+.right > .circle_wrap1 {
+    justify-content: space-evenly;
+    top: -140px;
+}
+.c_circle1:nth-child(2n) {
+    margin-left: -50px;
+}
+#c2 {
+    transform: translate3d(-20%, 0, 0);
+}
+#c9 {
+    transform: translate3d(30%, 0, 0);
+}
+#c5 {
+    transform: translate3d(-10%, 0, 0);
+}
 
+#c8 {
+    transform: translate3d(10%, 0, 0);
 }
-.c_circle:nth-child(4n-1){
-    margin-top:20px;
 
+.c_circle,
+.c_circle1,
+.c_circle2 {
+    width: 120px;
 }
-.c_circle>img{
-    width:100%;
+/* .c_circle {
+    transform: translateY(-240px);
+}
+.c_circle1 {
+    transform: translateY(-120px);
+}
+.c_circle2 {
+    transform: translateY(-360px);
+} */
+.c_circle1 > img {
+    width: 100%;
+}
+.c_circle > img {
+    width: 100%;
+}
+.c_circle2 > img {
+    width: 100%;
 }
 </style>
