@@ -11,6 +11,12 @@
             </div>
             <div class="right b_yellow">
                 <h2 class="p50all">CONTACT</h2>
+                <div class="info p50all" v-if="mobile">
+                    <p>SEWON KIM</p>
+                    <p>TEL : 010 - 5754 - 8799</p>
+                    <p>E-MAIL : sewon0076@naver.com</p>
+                    <p>INSTAGRAM : @31_luminous</p>
+                </div>
                 <div class="circle_wrap1">
                     <div class="c_circle1" id="c2"><img src="../../public/img/Asset8.png" alt="" /></div>
                     <div class="c_circle1" id="c3"><img src="../../public/img/Asset5.png" alt="" /></div>
@@ -34,6 +40,23 @@
         </div>
     </div>
 </template>
+<script>
+export default {
+    data() {
+        return {
+            mobile: false,
+        };
+    },
+    mounted() {
+        let vw = window.innerWidth;
+        if (vw < 834) {
+            this.mobile = !this.mobile;
+        } else {
+            this.mobile = false;
+        }
+    },
+};
+</script>
 <style scoped>
 .sec_wrap > div {
     height: 50vh;
@@ -108,5 +131,20 @@
 }
 .c_circle2 > img {
     width: 100%;
+}
+@media (max-width: 834px) {
+    .left {
+        display: none;
+    }
+    .sec_wrap > .right {
+        height: 100vh;
+    }
+    .right > .info {
+        position: relative;
+        display: block;
+    }
+    .info p {
+        font-weight: 900;
+    }
 }
 </style>

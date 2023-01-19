@@ -7,9 +7,9 @@
                     <h1>PORTFOLIO</h1>
                 </div>
                 <div class="bottom">
-                    <p>김세원_SEWON KIM</p>
-                    <p>TEL : 010 5754 8799</p>
-                    <p>E-MAIL : sewon0076@naver.com</p>
+                    <p class="kr">김세원_SEWON KIM</p>
+                    <p class="kr">TEL : 010 5754 8799</p>
+                    <p class="kr">E-MAIL : sewon0076@naver.com</p>
                 </div>
             </div>
             <div class="p50all b_black">
@@ -99,7 +99,7 @@ export default {
     padding-top: 100%;
     box-sizing: border-box;
     border-radius: 50%;
-    background-size: 77%;
+    background-size: 82%;
     background-position: center center;
     background-repeat: no-repeat;
 }
@@ -136,5 +136,38 @@ export default {
 }
 .b_red {
     background-image: url(../../public/img/poly_line_beige.png);
+}
+@media (max-width: 834px) {
+    .sec_wrap > .b_black {
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .circle_wrap {
+        width: 70%;
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    .circle {
+        width: calc(50% - 7.5px);
+    }
+}
+@media (max-width: 500px) {
+    .circle_wrap {
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    .circle {
+        width: calc(50% - 7.5px);
+    }
 }
 </style>

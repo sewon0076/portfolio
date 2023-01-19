@@ -182,4 +182,32 @@
         transition: 2s;
     }
 }
+@media (max-width: 834px) {
+    .sec_wrap {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        height: 100vh;
+        align-items: center;
+    }
+    .circle_wrap {
+        width: 100%;
+        height: fit-content;
+        padding-top: 100px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+    .circle {
+        width: calc(33.3333% - 20px);
+        height: fit-content;
+    }
+    h2 {
+        width: 100%;
+        text-align: left;
+    }
+}
 </style>

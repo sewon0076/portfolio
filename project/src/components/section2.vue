@@ -74,4 +74,17 @@ h1.bottom {
     border-right: 3px solid #f3ede4; /* 선 두께 */
     transform: rotate(45deg); /* 각도 */
 }
+@media (max-width: 834px) {
+    .sec_wrap > .b_yellow {
+        height: 50vh;
+    }
+    .portrait {
+        width: auto;
+        height: 70%;
+        margin-top: 100px;
+    }
+    .portrait > img {
+        height: 100%;
+    }
+}
 </style>
