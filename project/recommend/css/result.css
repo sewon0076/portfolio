@@ -1,0 +1,13 @@
+main#result{
+    background-color: #fefefe;
+}
+#result h1{
+    color:#F4644C;
+}
+#result .btn h5{
+    color:#F7F97B;
+}
+p.cate{
+    color:#31A99B;
+    margin-bottom: -15px;
+}

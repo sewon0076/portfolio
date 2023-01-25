@@ -3,7 +3,9 @@
         <div class="sec_wrap b_black p50all">
             <h2 class="beige">CLONE-CODING / TOY-PROJECT</h2>
             <div class="content_wrap">
-                <div></div>
+                <div>
+                    <a href="@/../../recommend/main.html">project1</a>
+                </div>
                 <div></div>
                 <div></div>
                 <div></div>
@@ -50,6 +52,11 @@
         height: calc(50% - 20px);
         box-sizing: border-box;
         background-color: aqua;
+    }
+    .content_wrap > div >a{
+        display: block;
+        width:100%;
+        height:100%;
     }
 }
 </style>
