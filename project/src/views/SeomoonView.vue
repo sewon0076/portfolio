@@ -26,5 +26,5 @@ export default {
 };
 </script>
 <style scoped>
-@import url(../../public/css/mockup.css);
+@import url(../../public/css/m_common.css);
 </style>

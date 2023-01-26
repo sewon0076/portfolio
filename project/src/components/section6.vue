@@ -4,11 +4,25 @@
             <h2 class="beige">CLONE-CODING / TOY-PROJECT</h2>
             <div class="content_wrap">
                 <div>
-                    <a href="@/../../recommend/main.html">project1</a>
+                    <a href="http://sewonprojects.dothome.co.kr/random_food/index.html">
+                        <div><p class="bold beige">VIEW PROJECT</p></div>
+                    </a>
                 </div>
-                <div></div>
-                <div></div>
-                <div></div>
+                <div>
+                    <a href="http://sewonprojects.dothome.co.kr/random_food/index.html">
+                        <div><p class="bold beige">VIEW PROJECT</p></div>
+                    </a>
+                </div>
+                <div>
+                    <a href="http://sewonprojects.dothome.co.kr/random_food/index.html">
+                        <div><p class="bold beige">VIEW PROJECT</p></div>
+                    </a>
+                </div>
+                <div>
+                    <a href="http://sewonprojects.dothome.co.kr/random_food/index.html">
+                        <div><p class="bold beige">VIEW PROJECT</p></div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -32,6 +46,30 @@
     box-sizing: border-box;
     background-color: aqua;
 }
+.content_wrap > div > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+.content_wrap > div:nth-child(1) > a {
+    background-image: url(../../public/img/random.gif);
+}
+.content_wrap > div > a > div {
+    width: 100%;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.content_wrap > div > a:hover > div {
+    height: 100%;
+}
 @media (max-width: 834px) {
     .sec_wrap {
         display: block;
@@ -52,11 +90,6 @@
         height: calc(50% - 20px);
         box-sizing: border-box;
         background-color: aqua;
-    }
-    .content_wrap > div >a{
-        display: block;
-        width:100%;
-        height:100%;
     }
 }
 </style>
