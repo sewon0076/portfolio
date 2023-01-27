@@ -8,6 +8,7 @@
         <section6 />
         <section7 />
         <section8 />
+        <section9 />
     </div>
 </template>
 
@@ -22,6 +23,7 @@ import section5 from "@/components/section5.vue";
 import section6 from "@/components/section6.vue";
 import section7 from "@/components/section7.vue";
 import section8 from "@/components/section8.vue";
+import section9 from "@/components/section9.vue";
 
 export default {
     data() {
@@ -40,6 +42,7 @@ export default {
         section6,
         section7,
         section8,
+        section9,
     },
     // mounted() {
     //     document.addEventListener("scroll", this.scrollChange);

@@ -9,7 +9,7 @@
                     </a>
                 </div>
                 <div>
-                    <a href="http://sewonprojects.dothome.co.kr/random_food/index.html">
+                    <a href="/list">
                         <div><p class="bold beige">VIEW PROJECT</p></div>
                     </a>
                 </div>

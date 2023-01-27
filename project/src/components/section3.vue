@@ -5,7 +5,7 @@
                 <div class="content1" v-if="show">
                     <div class="content_wrap">
                         <p>EDUCATION</p>
-                        <p>
+                        <p class="kr">
                             2018.04 - 검정고시 졸업<br />
                             2019.09 - Graphic Design, GeorgeBrownCollege, Toronto 입학<br />
                             2020. 09 ~ 휴학(COVID - 19)
@@ -14,7 +14,7 @@
                     <span></span>
                     <div class="content_wrap">
                         <p>CERTIFICATION</p>
-                        <p>
+                        <p class="kr">
                             IELTS EACH 6.5<br />
                             2022.09 ~ 2023.02 - 국비지원 프론트엔드 수료
                         </p>
@@ -100,15 +100,20 @@ export default {
     width: 100%;
     padding: 30px 20px;
     box-sizing: border-box;
+    transition: 0.5s;
 }
 p {
     line-height: 1.7;
 }
 .b_red .b_beige:hover {
     opacity: 1;
+    padding-left: 50px;
+    transition: 0.5s;
 }
 .opacity {
+    box-sizing: border-box;
     opacity: 0.5;
+    transition: 0.5s;
 }
 @media (max-width: 834px) {
     .sec_wrap {

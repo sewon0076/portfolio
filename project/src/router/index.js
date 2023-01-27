@@ -34,6 +34,11 @@ const routes = [
         // which is lazy-loaded when the route is visited.
         component: () => import(/* webpackChunkName: "seomoon" */ "../views/BfocView.vue"),
     },
+    {
+        path: "/list",
+        name: "list",
+        component: () => import(/* webpackChunkName: "project" */ "../views/listView.vue"),
+    },
 ];
 
 const router = createRouter({
