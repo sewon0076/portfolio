@@ -8,102 +8,97 @@
                 </div>
             </div>
             <div class="right p50all b_beige">
-                
-                    <div>
-                        <div class="view b_beige" @click="goSeomoon">
-                            <div class="b_blue"></div>
-                            <h3>VIEW WEBSITE</h3>
-                        </div>
-                        <a href="/seomoon" class="ex_wrap">
-                            <div class="explain">
-                                <h3 class="kr">서문야시장 <span>seomoon-night market</span></h3>
-                                <p>
-                                    서문야시장의 홈페이지 리뉴얼 작업입니다.<br />
-                                    구조적인 불편함과 반응형이 되지 않는 등의 문제점들을 보완하면서 새로운 페이지들을 추가하며, DB연결을 통해 데이터를
-                                    담아두고 불러오는등의 작업을 완료한 프로젝트 입니다.
-                                </p>
-                                <div>
-                                    <div class="list">
-                                        <p class="bold">제작 기간 :</p>
-                                        <p>2022.10월 중순 ~2022.12월 중순</p>
-                                    </div>
-                                    <div class="list">
-                                        <p class="bold">사용 기술 :</p>
-                                        <p>node,html,css,js,mySql,photoshop,illustrator,figma</p>
-                                    </div>
-                                    <div class="list">
-                                        <p class="bold">프로젝트 구성 :</p>
-                                        <p>반응형 웹 + Main + Sub() + DB연결(notice, store , login)</p>
-                                    </div>
+                <div>
+                    <div class="view b_beige" @click="goSeomoon">
+                        <div class="b_blue"></div>
+                        <h3>VIEW WEBSITE</h3>
+                    </div>
+                    <a href="/seomoon" class="ex_wrap">
+                        <div class="explain">
+                            <h3 class="kr">서문야시장 <span>seomoon-night market</span></h3>
+                            <p>
+                                서문야시장의 홈페이지 리뉴얼 작업입니다.<br />
+                                구조적인 불편함과 반응형이 되지 않는 등의 문제점들을 보완하면서 새로운 페이지들을 추가하며, DB연결을 통해 데이터를
+                                담아두고 불러오는등의 작업을 완료한 프로젝트 입니다.
+                            </p>
+                            <div>
+                                <div class="list">
+                                    <p class="bold">제작 기간 :</p>
+                                    <p>2022.10월 중순 ~2022.12월 중순</p>
+                                </div>
+                                <div class="list">
+                                    <p class="bold">사용 기술 :</p>
+                                    <p>node,html,css,js,mySql,photoshop,illustrator,figma</p>
+                                </div>
+                                <div class="list">
+                                    <p class="bold">프로젝트 구성 :</p>
+                                    <p>반응형 웹 + Main + Sub() + DB연결(notice, store , login)</p>
                                 </div>
                             </div>
-                        </a>
-                    </div>
-                
-                
-                    <div>
-                        <div class="view b_beige" @click="goWouldyou">
-                            <div class="b_blue"></div>
-                            <h3>VIEW WEBSITE</h3>
                         </div>
-                        <a href="/wouldyou" class="ex_wrap">
-                            <div class="explain">
-                                <h3 class="kr">우주라이크 <span>Would you like?</span></h3>
-                                <p>
-                                    천문우주 전문 잡지를 제작하고 배포하는 사이트 우주라이크를 리뉴얼한 프로젝트 입니다.
-                                    <br />불편한 네비게이션과 컨텐프의 부족등을 보완하고 동적인 요소들을 추가하였습니다. <br />
-                                    DB연결을 통해 데이터를 담아두고 불러오는등의 작업을 완료한 프로젝트 입니다.
-                                </p>
-                                <div>
-                                    <div class="list">
-                                        <p class="bold">제작 기간 :</p>
-                                        <p>2022.11월 초 ~2022.1월 초</p>
-                                    </div>
-                                    <div class="list">
-                                        <p class="bold">사용기술 :</p>
-                                        <p>node,html,css,js,mySql,photoshop,illustrator,figma</p>
-                                    </div>
-                                    <div class="list">
-                                        <p class="bold">프로젝트 구성 :</p>
-                                        <p>반응형 웹 + Main + Sub() + DB연결(journal,notice)</p>
-                                    </div>
+                    </a>
+                </div>
+
+                <div>
+                    <div class="view b_beige" @click="goWouldyou">
+                        <div class="b_blue"></div>
+                        <h3>VIEW WEBSITE</h3>
+                    </div>
+                    <a href="/wouldyou" class="ex_wrap">
+                        <div class="explain">
+                            <h3 class="kr">우주라이크 <span>Would you like?</span></h3>
+                            <p>
+                                천문우주 전문 잡지를 제작하고 배포하는 사이트 우주라이크를 리뉴얼한 프로젝트 입니다.
+                                <br />불편한 네비게이션과 컨텐프의 부족등을 보완하고 동적인 요소들을 추가하였습니다. <br />
+                                DB연결을 통해 데이터를 담아두고 불러오는등의 작업을 완료한 프로젝트 입니다.
+                            </p>
+                            <div>
+                                <div class="list">
+                                    <p class="bold">제작 기간 :</p>
+                                    <p>2022.11월 초 ~2022.1월 초</p>
+                                </div>
+                                <div class="list">
+                                    <p class="bold">사용기술 :</p>
+                                    <p>node,html,css,js,mySql,photoshop,illustrator,figma</p>
+                                </div>
+                                <div class="list">
+                                    <p class="bold">프로젝트 구성 :</p>
+                                    <p>반응형 웹 + Main + Sub() + DB연결(journal,notice)</p>
                                 </div>
                             </div>
-                        </a>
-                    </div>
-                
-                
-                    <div>
-                        <div class="view b_beige" @click="goBfoc">
-                            <div class="b_blue"></div>
-                            <h3>VIEW WEBSITE</h3>
                         </div>
-                        <a href="/bfoc" class="ex_wrap">
-                            <div class="explain">
-                                <h3 class="kr">부산문화관광축제조직위원회<span>BFOC</span></h3>
-                                <p>
-                                    부산문화관광축제조직위원회를 리뉴얼한 프로젝트
-                                    입니다. <br />반응형과 복잡한 구조등을 개선하고 사이트의 목적에 맞는 분위기로 리디자인 하였습니다. <br />또, DB연결을
-                                    통해 데이터를 담아두고 불러오는등의 작업을 완료한 프로젝트 입니다.
-                                </p>
-                                <div>
-                                    <div class="list">
-                                        <p class="bold">제작 기간 :</p>
-                                        <p>2022.11월 초 ~2022.1월 초</p>
-                                    </div>
-                                    <div class="list">
-                                        <p class="bold">사용 기술 :</p>
-                                        <p>node,html,css,js,mySql,photoshop,illustrator,figma</p>
-                                    </div>
-                                    <div class="list">
-                                        <p class="bold">프로젝트 구성 :</p>
-                                        <p>반응형 웹 + Main + Sub() + DB연결(journal,notice)</p>
-                                    </div>
+                    </a>
+                </div>
+
+                <div>
+                    <div class="view b_beige" @click="goBfoc">
+                        <div class="b_blue"></div>
+                        <h3>VIEW WEBSITE</h3>
+                    </div>
+                    <a href="/bfoc" class="ex_wrap">
+                        <div class="explain">
+                            <h3 class="kr">부산문화관광축제조직위원회<span>BFOC</span></h3>
+                            <p>
+                                부산문화관광축제조직위원회를 리뉴얼한 프로젝트 입니다. <br />반응형과 복잡한 구조등을 개선하고 사이트의 목적에 맞는
+                                분위기로 리디자인 하였습니다. <br />또, DB연결을 통해 데이터를 담아두고 불러오는등의 작업을 완료한 프로젝트 입니다.
+                            </p>
+                            <div>
+                                <div class="list">
+                                    <p class="bold">제작 기간 :</p>
+                                    <p>2022.11월 초 ~2022.1월 초</p>
+                                </div>
+                                <div class="list">
+                                    <p class="bold">사용 기술 :</p>
+                                    <p>node,html,css,js,mySql,photoshop,illustrator,figma</p>
+                                </div>
+                                <div class="list">
+                                    <p class="bold">프로젝트 구성 :</p>
+                                    <p>반응형 웹 + Main + Sub() + DB연결(journal,notice)</p>
                                 </div>
                             </div>
-                        </a>
-                    </div>
-                
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -157,13 +152,13 @@ export default {
                 }
             }
         },
-        goSeomoon : function(){
-            console.log('click');
-            window.location.href = 'https://seomoon-siot.herokuapp.com/';
+        goSeomoon: function () {
+            console.log("click");
+            window.location.href = "https://seomoon-siot.herokuapp.com/";
         },
-        goWouldyou : function(){
-            window.location.href ="https://wouldyoulike.herokuapp.com/";
-        }
+        goWouldyou: function () {
+            window.location.href = "https://wouldyoulike.herokuapp.com/";
+        },
     },
 };
 </script>
@@ -205,17 +200,23 @@ export default {
     height: fit-content;
     z-index: 0;
 } */
-.right  > div {
+.right > div {
     position: relative;
     width: 100%;
     padding-top: 56.25%;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
     background-color: lightblue;
     overflow: hidden;
 }
-.ex_wrap{
+.right > div:nth-child(2) {
+    background-image: url(../../public/img/wouldyou.gif);
+}
+.ex_wrap {
     display: block;
     width: 100%;
-    height:0;
+    height: 0;
     position: absolute;
     box-sizing: border-box;
     overflow: hidden;
@@ -226,10 +227,8 @@ export default {
     padding: 0px 25px;
 }
 .explain {
-
     width: 100%;
     height: 100%;
-
 }
 .explain p,
 .explain h3,
@@ -252,7 +251,7 @@ export default {
     align-items: center;
     gap: 10px;
 }
-.right > div:hover .ex_wrap{
+.right > div:hover .ex_wrap {
     height: 100%;
     transition: 1s;
     padding: 25px 25px 100px;

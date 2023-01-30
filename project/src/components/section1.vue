@@ -86,11 +86,13 @@ export default {
     padding: 50px 0;
     box-sizing: border-box;
     display: flex;
+    justify-content: center;
+    align-items: c;
     flex-wrap: wrap;
     gap: 25px;
 }
 .circle {
-    width: calc(50% - 12.5px);
+    width: calc(50% - 35px);
     height: auto;
 }
 .circle > div {
