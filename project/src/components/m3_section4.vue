@@ -143,7 +143,7 @@ export default {
     width: calc(50% - 100px);
 }
 .img.func1 > div {
-    background-image: url(../../public/img/seomoon_notice.gif);
+    background-image: url(../../public/img/s_notice.gif);
 }
 .list {
     margin: 100px 0;

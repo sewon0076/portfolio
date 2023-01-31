@@ -15,7 +15,10 @@
 /* ======font */
 .kr {
     font-family: "NanumSquare", san-serif;
-    font-weight: 700;
+    font-weight: 500;
+}
+.kr.bold {
+    font-weight: 900;
 }
 h1 {
     font-size: 60px;

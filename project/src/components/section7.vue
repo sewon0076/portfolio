@@ -2,15 +2,33 @@
     <div class="section7" id="experiences">
         <div class="sec_wrap">
             <div class="left p50all b_beige">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+                <div>
+                    <a href=""><img src="../../public/img/insta1.png" alt="" /></a>
+                </div>
+                <div>
+                    <a href=""><img src="../../public/img/insta2.png" alt="" /></a>
+                </div>
+                <div>
+                    <a href=""><img src="../../public/img/insta3.png" alt="" /></a>
+                </div>
+                <div>
+                    <a href=""><img src="../../public/img/insta4.png" alt="" /></a>
+                </div>
+                <div>
+                    <a href=""><img src="../../public/img/insta5.png" alt="" /></a>
+                </div>
+                <div>
+                    <a href="https://www.instagram.com/p/CZyrFdzP-4H/"><img src="../../public/img/insta6.png" alt="" /></a>
+                </div>
+                <div>
+                    <a href="https://www.instagram.com/p/CZs_GULPihW/"><img src="../../public/img/insta7.png" alt="" /></a>
+                </div>
+                <div>
+                    <a href="https://www.instagram.com/p/CZkxB-7vrGA/"><img src="../../public/img/insta8.png" alt="" /></a>
+                </div>
+                <div>
+                    <a href="https://www.instagram.com/p/CZNjJGiPudk/"><img src="../../public/img/insta9.png" alt="" /></a>
+                </div>
             </div>
             <div class="right b_green">
                 <div class="title p50all" v-bind:class="{ fixed: change }"><img src="../../public/img/hobby_title.png" alt="" /></div>
@@ -59,7 +77,20 @@ export default {
 .left > div {
     width: calc(33.3333% - 33.33333px);
     height: calc(33.3333% - 33.33333px);
-    background-color: aliceblue;
+}
+.left > div > a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.left > div > a > img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    height: 100%;
 }
 .title {
     position: relative;

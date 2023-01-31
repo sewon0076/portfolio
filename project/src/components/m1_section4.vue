@@ -118,10 +118,10 @@ export default {
     width: calc(100% - 100px);
 }
 .img > div {
-    padding-top: 51.4635%;
+    padding-top: 59.2569%;
     width: 100%;
     background-size: cover;
-    background-position: center center;
+    background-position: center top;
     background-repeat: no-repeat;
 }
 .func1 {
@@ -143,7 +143,10 @@ export default {
     width: calc(50% - 100px);
 }
 .img.func1 > div {
-    background-image: url(../../public/img/seomoon_notice.gif);
+    background-image: url(../../public/img/s_notice.gif);
+}
+.img.func2 > div {
+    background-image: url(../../public/img/s_signup.gif);
 }
 .list {
     margin: 100px 0;

@@ -51,16 +51,21 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background-size: cover;
-    background-position: center top;
+    background-size: 85%;
+    background-position: center center;
     background-repeat: no-repeat;
 }
 .content_wrap > div:nth-child(1) > a {
     background-image: url(../../public/img/random.gif);
+    background-color: #f4644c;
+}
+.content_wrap > div:nth-child(2) > a {
+    background-image: url(../../public/img/todo.gif);
+    background-color: #ccccfe;
 }
 .content_wrap > div > a > div {
     width: 100%;
-    height: 0;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
     display: flex;
     justify-content: center;
@@ -68,7 +73,7 @@
     overflow: hidden;
 }
 .content_wrap > div > a:hover > div {
-    height: 100%;
+    height: 0;
 }
 @media (max-width: 834px) {
     .sec_wrap {

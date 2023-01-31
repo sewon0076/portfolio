@@ -210,8 +210,21 @@ export default {
     background-color: lightblue;
     overflow: hidden;
 }
-.right > div:nth-child(2) {
+
+.right > div:hover:nth-child(2) {
     background-image: url(../../public/img/wouldyou.gif);
+}
+.right > div:hover:nth-child(3) {
+    background-image: url(../../public/img/bfoc.gif);
+}
+.right > div:nth-child(1) {
+    background-image: url(../../public/img/s_main.png);
+}
+.right > div:nth-child(2) {
+    background-image: url(../../public/img/w_main.png);
+}
+.right > div:nth-child(3) {
+    background-image: url(../../public/img/b_main.png);
 }
 .ex_wrap {
     display: block;
