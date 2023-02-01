@@ -2,36 +2,43 @@
     <div class="section6">
         <div class="sec_wrap b_black p50all">
             <h2 class="beige">CLONE-CODING / TOY-PROJECT</h2>
-            <div class="content_wrap">
-                <div>
-                    <a href="http://sewonprojects.dothome.co.kr/random_food/index.html">
-                        <div><p class="bold beige">VIEW PROJECT</p></div>
-                    </a>
-                </div>
-                <div>
-                    <a href="/list">
-                        <div><p class="bold beige">VIEW PROJECT</p></div>
-                    </a>
-                </div>
-                <div>
-                    <a href="http://sewonprojects.dothome.co.kr/random_food/index.html">
-                        <div><p class="bold beige">VIEW PROJECT</p></div>
-                    </a>
-                </div>
-                <div>
-                    <a href="http://sewonprojects.dothome.co.kr/random_food/index.html">
-                        <div><p class="bold beige">VIEW PROJECT</p></div>
-                    </a>
+            <div class="swiper mySwiper">
+                <div class="content_wrap swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="http://sewonprojects.dothome.co.kr/random_food/index.html">
+                            <div><p class="bold beige">VIEW PROJECT</p></div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/list">
+                            <div><p class="bold beige">VIEW PROJECT</p></div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="http://sewonprojects.dothome.co.kr/random_food/index.html">
+                            <div><p class="bold beige">VIEW PROJECT</p></div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="http://sewonprojects.dothome.co.kr/random_food/index.html">
+                            <div><p class="bold beige">VIEW PROJECT</p></div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </template>
-<script></script>
+
+<script src="../../public/js/swiper.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 <style scoped>
 .sec_wrap {
     display: block;
     height: 50vh;
+}
+.sec_wrap >.swiper{
+    width:100%;
 }
 .content_wrap {
     display: flex;

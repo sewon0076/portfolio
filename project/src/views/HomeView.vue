@@ -9,6 +9,7 @@
         <section7 />
         <section8 />
         <section9 />
+        <swip />
     </div>
 </template>
 
@@ -24,6 +25,8 @@ import section6 from "@/components/section6.vue";
 import section7 from "@/components/section7.vue";
 import section8 from "@/components/section8.vue";
 import section9 from "@/components/section9.vue";
+import swip from "@/components/swiper.vue";
+
 
 export default {
     data() {
@@ -43,6 +46,7 @@ export default {
         section7,
         section8,
         section9,
+        swip,
     },
     // mounted() {
     //     document.addEventListener("scroll", this.scrollChange);
