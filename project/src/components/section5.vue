@@ -235,7 +235,7 @@ export default {
     overflow: hidden;
     bottom: 0;
     left: 0;
-    background-color: rgba(32, 33, 36, 0.85);
+    background-color: rgba(0, 0, 0, 0.85);
     transition: 1s;
     padding: 0px 25px;
 }
