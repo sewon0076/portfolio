@@ -24,7 +24,7 @@
                         </a>
                     </swiper-slide>
                     <swiper-slide>
-                        <a href="toDo.vue">
+                        <a href="/list">
                             <div>
                                 <p class="bold beige">VIEW PROJECT</p>
                             </div>

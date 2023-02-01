@@ -45,10 +45,12 @@
             </div>
             <div class="b_beige p50all">
                 <div class="portrait"><img src="../../public/img/portrait.png" alt="" /></div>
-                <div class="b_green">
-                    <h3 class="beige">RESUME</h3>
-                    <div class="arrow-next"></div>
-                </div>
+                <a href="resume" class="r_btn">
+                    <div class="b_green">
+                        <h3 class="beige">RESUME</h3>
+                        <div class="arrow-next"></div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
@@ -180,6 +182,11 @@ span.line .b_yellow {
     border-top: 3px solid #f3ede4; /* 선 두께 */
     border-right: 3px solid #f3ede4; /* 선 두께 */
     transform: rotate(45deg); /* 각도 */
+}
+.r_btn {
+    display: block;
+    width: fit-content;
+    height: fit-content;
 }
 @media (max-width: 834px) {
     .sec_wrap > .b_yellow {

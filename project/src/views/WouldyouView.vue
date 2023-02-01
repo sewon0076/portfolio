@@ -29,5 +29,7 @@ export default {
 };
 </script>
 <style scoped>
+@import url(../../public/css/reset.css);
+@import url(../../public/css/common.css);
 @import url(../../public/css/m_common.css);
 </style>
