@@ -62,6 +62,10 @@ p {
     width: 70%;
     padding-top: 70%;
     background-color: aliceblue;
+    background-image: url(../../public/img/poly9_green.png);
+    background-size: 100%;
+    background-position: bottom -2000% center;
+    background-repeat: no-repeat;
     border-radius: 50%;
     box-sizing: border-box;
     overflow: hidden;

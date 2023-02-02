@@ -28,11 +28,11 @@ export default {
     display: flex;
 }
 .wrap > div:nth-child(1) {
-    width: 25%;
+    width: 400px;
     height: 100%;
 }
 .wrap > div:nth-child(2) {
-    width: 75%;
+    width: calc(100% - 400px);
     height: 100%;
 }
 .resume {

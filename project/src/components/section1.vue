@@ -13,23 +13,67 @@
                 </div>
             </div>
             <div class="p50all b_black">
-                <div class="circle_wrap">
-                    <div class="circle">
-                        <div class="b_beige b1">
-                            <h3 v-on:click="goSection" data-target="intro">INTRODUCTION</h3>
+                <div>
+                    <div class="cir_wrap">
+                        <div class="b_beige circle">
+                            <h4 class="bold">INTRODUCTION</h4>
                         </div>
+                        <h4 class="mobile bold beige">INTRODUCTION</h4>
                     </div>
-                    <div class="circle">
-                        <div class="b_red"><h3 v-on:click="goSection" data-target="projects">PROJECTS</h3></div>
+                    <div class="cir_wrap">
+                        <div class="b_beige circle">
+                            <h4 class="bold">PROJECTS</h4>
+                        </div>
+                        <h4 class="mobile bold beige">INTRODUCTION</h4>
                     </div>
-                    <div class="circle">
-                        <div class="b_blue"><h3 v-on:click="goSection" data-target="experiences">EXPEREIENCES</h3></div>
+                    <div class="cir_wrap">
+                        <div class="b_beige circle">
+                            <h4 class="bold">HOBBY</h4>
+                        </div>
+                        <h4 class="mobile bold beige">INTRODUCTION</h4>
                     </div>
-                    <div class="circle">
-                        <div class="b_beige b2"><h3 v-on:click="goSection" data-target="contact">CONTACT</h3></div>
+                    <div class="cir_wrap">
+                        <div class="b_beige circle">
+                            <h4 class="bold">CONTACT</h4>
+                        </div>
+                        <h4 class="mobile bold beige">INTRODUCTION</h4>
                     </div>
                 </div>
             </div>
+            <!-- <div class="p50all b_black">
+                <div class="circle_wrap">
+                    <div class="circle">
+                        <div class="b_beige b1">
+                            <div class="cir_wrap" v-on:click="goSection" data-target="intro"></div>
+                            <h3>INTRODUCTION</h3>
+                        </div>
+                    </div>
+                    <div class="circle">
+                        <div class="b_red">
+                            <div class="cir_wrap" v-on:click="goSection" data-target="projects"></div>
+                            <h3>PROJECTS</h3>
+                        </div>
+                    </div>
+                    <div class="circle">
+                        <div class="b_blue">
+                            <div class="cir_wrap" v-on:click="goSection" data-target="experiences"></div>
+                            <h3>EXPEREIENCES</h3>
+                        </div>
+                    </div>
+                    <div class="circle">
+                        <div class="b_beige b2">
+                            <div class="cir_wrap" v-on:click="goSection" data-target="contact"></div>
+                            <h3>CONTACT</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile">
+                    <h3>projects</h3>
+                    <h3>projects</h3>
+                    <h3>projects</h3>
+                    <h3>projects</h3>
+                </div>
+            </div> -->
         </div>
     </div>
 </template>
@@ -82,18 +126,60 @@ export default {
 };
 </script>
 <style scoped>
-.circle_wrap {
+.sec_wrap > .b_black {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sec_wrap > .b_black > div {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+.mobile {
+    display: none;
+}
+.cir_wrap {
+    width: calc(50% - 12.5px);
+    background-color: aqua;
+}
+.circle {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    border-radius: 50%;
+}
+.circle h4 {
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+}
+
+/* .circle_wrap {
+    width: 100%;
     padding: 50px 0;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
-    align-items: c;
+    align-items: center;
     flex-wrap: wrap;
     gap: 25px;
 }
 .circle {
     width: calc(50% - 35px);
     height: auto;
+}
+.mobile{
+    display: none;
 }
 .circle > div {
     position: relative;
@@ -109,18 +195,23 @@ export default {
     transform: rotate(360deg);
     transition: 3s;
 }
-.circle h3 {
+.cir_wrap {
     position: absolute;
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     border-radius: 50%;
     top: 0;
-    left: 0;
-    line-height: 100%;
 }
+.circle h3 {
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    line-height: 100%;
+    font-size: 28px;
+} */
 .left {
     display: flex;
     flex-direction: column;
@@ -139,6 +230,26 @@ export default {
 .b_red {
     background-image: url(../../public/img/poly_line_beige.png);
 }
+@media (max-width: 1440px) {
+    .cir_wrap {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .circle {
+        position: relative;
+        width: 50%;
+        padding-top: 50%;
+        border-radius: 50%;
+    }
+    .circle h4 {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+}
 @media (max-width: 834px) {
     .sec_wrap > .b_black {
         width: 100%;
@@ -148,15 +259,15 @@ export default {
         align-items: center;
     }
     .circle_wrap {
-        width: 70%;
+        width: 100%;
         box-sizing: border-box;
-        display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
+        justify-content: space-between;
     }
     .circle {
-        width: calc(50% - 7.5px);
+        flex: 1;
+        overflow: hidden;
     }
 }
 @media (max-width: 500px) {

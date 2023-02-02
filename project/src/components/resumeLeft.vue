@@ -1,5 +1,5 @@
 <template>
-    <div class="wrap p50all">
+    <div class="left wrap p50all">
         <div class="intro_wrap">
             <div class="title">
                 <h4 class="en bold blue">Introduction</h4>
@@ -23,7 +23,86 @@
                 <span class="b_blue line"></span>
             </div>
             <div class="content p50">
-                <div class="skills"></div>
+                <div class="skills">
+                    <div class="skills_wrap">
+                        <div class="skill">
+                            <p class="en bold">HTML</p>
+                            <div class="progress_wrap html">
+                                <div class="bar b_yellow">
+                                    <div class="b_yellow circle"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <p class="en bold">CSS</p>
+                            <div class="progress_wrap css">
+                                <div class="bar b_yellow">
+                                    <div class="b_yellow circle"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <p class="en bold">JavaScript</p>
+                            <div class="progress_wrap js">
+                                <div class="bar b_yellow">
+                                    <div class="b_yellow circle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="skill">
+                            <p class="en bold">Node.js</p>
+                            <div class="progress_wrap node">
+                                <div class="bar b_yellow">
+                                    <div class="b_yellow circle"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <p class="en bold">Vue.js</p>
+                            <div class="progress_wrap vue">
+                                <div class="bar b_yellow">
+                                    <div class="b_yellow circle"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <p class="en bold">jQuery</p>
+                            <div class="progress_wrap jQuery">
+                                <div class="bar b_yellow">
+                                    <div class="b_yellow circle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="skill">
+                            <p class="en bold">Illustrator</p>
+                            <div class="progress_wrap ai">
+                                <div class="bar b_yellow">
+                                    <div class="b_yellow circle"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <p class="en bold">Photoshop</p>
+                            <div class="progress_wrap ps">
+                                <div class="bar b_yellow">
+                                    <div class="b_yellow circle"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <p class="en bold">Language - English</p>
+                            <div class="progress_wrap language">
+                                <div class="bar b_yellow">
+                                    <div class="b_yellow circle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="certi_wrap">
@@ -36,6 +115,16 @@
                 <p>2022.09 ~ 2023.02 vue 활용 프론트엔드 국비지원 수료</p>
             </div>
         </div>
+        <div class="port_wrap">
+            <div class="title">
+                <h4 class="en bold blue">Portfolio</h4>
+                <span class="b_blue line"></span>
+            </div>
+            <div class="content p50">
+                <p>Git hub :</p>
+                <p>Portfolio adddress :</p>
+            </div>
+        </div>
     </div>
 </template>
 <style scoped>
@@ -46,12 +135,18 @@ p {
 .en {
     font-family: Helvetica, sans-serif;
 }
-.wrap {
-    display: block;
+.left.wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 100%;
 }
 .wrap > div {
     width: 100%;
+    margin-top: 50px;
+}
+.wrap > .intro_wrap {
+    margin-top: 0;
 }
 .title {
     width: 100%;
@@ -66,7 +161,138 @@ p {
     height: 2px;
 }
 .skills {
-    height: 150px;
-    background-color: lightblue;
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    gap: 50px;
+    /* background-color: lightblue; */
+}
+.skills > div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1;
+}
+.skills p.en.bold {
+    margin-bottom: 20px;
+}
+.progress_wrap {
+    width: 100%;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.bar {
+    position: relative;
+    height: 100%;
+    border-radius: 10px;
+}
+.bar > div {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-image: url(../../public/img/poly_line_beige.png);
+    background-size: 75%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.css .bar {
+    width: 90%;
+    animation-name: progressing_90;
+    animation-duration: 2s;
+    animation-duration: leaner;
+    animation-iteration-count: 1;
+}
+.js .bar {
+    width: 80%;
+    animation-name: progressing_80;
+    animation-duration: 2s;
+    animation-duration: leaner;
+    animation-iteration-count: 1;
+}
+.html .bar {
+    width: 95%;
+    animation-name: progressing_95;
+    animation-duration: 2s;
+    animation-duration: leaner;
+    animation-iteration-count: 1;
+}
+.node .bar {
+    width: 75%;
+    animation-name: progressing_75;
+    animation-duration: 2s;
+    animation-duration: leaner;
+    animation-iteration-count: 1;
+}
+.vue .bar {
+    width: 75%;
+    animation-name: progressing_75;
+    animation-duration: 2s;
+    animation-duration: leaner;
+    animation-iteration-count: 1;
+}
+.jQuery .bar {
+    width: 80%;
+    animation-name: progressing_80;
+    animation-duration: 2s;
+    animation-duration: leaner;
+    animation-iteration-count: 1;
+}
+.ai .bar {
+    width: 95%;
+    animation-name: progressing_95;
+    animation-duration: 2s;
+    animation-duration: leaner;
+    animation-iteration-count: 1;
+}
+.ps .bar {
+    width: 80%;
+    animation-name: progressing_80;
+    animation-duration: 2s;
+    animation-duration: leaner;
+    animation-iteration-count: 1;
+}
+.language .bar {
+    width: 95%;
+    animation-name: progressing_95;
+    animation-duration: 2s;
+    animation-duration: leaner;
+    animation-iteration-count: 1;
+}
+@keyframes progressing_95 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 95%;
+    }
+}
+@keyframes progressing_90 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 90%;
+    }
+}
+@keyframes progressing_80 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 80%;
+    }
+}
+@keyframes progressing_75 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 75%;
+    }
 }
 </style>
