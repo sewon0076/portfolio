@@ -153,7 +153,18 @@ p {
         height: 75vh;
     }
     .b_red {
-        gap: 30px;
+        gap: 25px;
+    }
+    .b_red .b_beige[data-v-425082fe] {
+        width: 100%;
+        padding: 20px 20px;
+        box-sizing: border-box;
+        transition: 0.5s;
+    }
+}
+@media (max-width: 600px) {
+    .b_red {
+        gap: 12.5px;
     }
 }
 </style>

@@ -2,6 +2,10 @@
     <div class="section1">
         <div class="sec_wrap">
             <div class="p50all b_beige left">
+                <div class="arrow_wrap desktop">
+                    <p>Click Categories<br />where you wonder</p>
+                    <div class="arrow"><img src="../../public/img/arrow_sec1.png" alt="" /></div>
+                </div>
                 <div class="top">
                     <h1>SEWON<span class="blue">'S</span></h1>
                     <h1>PORTFOLIO</h1>
@@ -14,29 +18,33 @@
             </div>
             <div class="p50all b_black">
                 <div>
-                    <div class="cir_wrap">
-                        <div class="b_beige circle">
-                            <h4 class="bold">INTRODUCTION</h4>
+                    <div class="arrow_wrap mobile">
+                        <p class="beige">Click Categories<br />where you wonder</p>
+                        <div class="arrow"><img src="../../public/img/arrow_sec1_mobile.png" alt="" /></div>
+                    </div>
+                    <div class="cir_wrap" v-on:click="goSection" data-target="intro">
+                        <div class="b_beige circle b1">
+                            <h3 class="bold">INTRODUCTION</h3>
                         </div>
                         <h4 class="mobile bold beige">INTRODUCTION</h4>
                     </div>
-                    <div class="cir_wrap">
-                        <div class="b_beige circle">
-                            <h4 class="bold">PROJECTS</h4>
+                    <div class="cir_wrap" v-on:click="goSection" data-target="projects">
+                        <div class="b_red circle">
+                            <h3 class="bold">PROJECTS</h3>
                         </div>
-                        <h4 class="mobile bold beige">INTRODUCTION</h4>
+                        <h4 class="mobile bold beige">PROJECTS</h4>
                     </div>
-                    <div class="cir_wrap">
-                        <div class="b_beige circle">
-                            <h4 class="bold">HOBBY</h4>
+                    <div class="cir_wrap" v-on:click="goSection" data-target="experiences">
+                        <div class="b_blue circle">
+                            <h3 class="bold">HOBBY</h3>
                         </div>
-                        <h4 class="mobile bold beige">INTRODUCTION</h4>
+                        <h4 class="mobile bold beige">HOBBY</h4>
                     </div>
-                    <div class="cir_wrap">
-                        <div class="b_beige circle">
-                            <h4 class="bold">CONTACT</h4>
+                    <div class="cir_wrap" v-on:click="goSection" data-target="contact">
+                        <div class="b_beige circle b2">
+                            <h3 class="bold">CONTACT</h3>
                         </div>
-                        <h4 class="mobile bold beige">INTRODUCTION</h4>
+                        <h4 class="mobile bold beige">CONTACT</h4>
                     </div>
                 </div>
             </div>
@@ -126,6 +134,45 @@ export default {
 };
 </script>
 <style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap");
+.arrow_wrap.mobile {
+    display: none;
+}
+.left {
+    position: relative;
+}
+.arrow_wrap {
+    position: absolute;
+    top: 200px;
+    /* right: 40px; */
+    display: flex;
+    animation-name: arrow;
+    animation-duration: 0.8s;
+    animation-duration: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes arrow {
+    from {
+        right: 40px;
+    }
+    to {
+        right: 28px;
+    }
+}
+.arrow_wrap p {
+    font-family: "Nanum Pen Script", cursive;
+    line-height: 0.9;
+    transform: translateY(-20%);
+    margin-right: 15px;
+    /* font-size: 22px; */
+}
+.arrow {
+    width: 150px;
+}
+.arrow > img {
+    width: 100%;
+}
 .sec_wrap > .b_black {
     width: 50%;
     height: 100vh;
@@ -142,20 +189,27 @@ export default {
     align-items: center;
     gap: 25px;
 }
-.mobile {
+h4.mobile {
     display: none;
 }
 .cir_wrap {
     width: calc(50% - 12.5px);
-    background-color: aqua;
 }
 .circle {
     position: relative;
     width: 100%;
     padding-top: 100%;
     border-radius: 50%;
+    background-size: 82%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: 0.5s ease-in-out;
 }
-.circle h4 {
+.circle:hover {
+    transform: rotate(360deg);
+    transition: 1.5s ease-in-out;
+}
+.circle h3 {
     position: absolute;
     width: fit-content;
     height: fit-content;
@@ -220,17 +274,25 @@ export default {
 .b_blue {
     background-image: url(../../public/img/poly_rec_beige.png);
 }
-.circle > .b_beige.b1 {
+.circle.b_beige.b1 {
     background-image: url(../../public/img/twist_diamond.png);
     background-size: 82%;
 }
-.b_beige.b2 {
+.circle.b_beige.b2 {
     background-image: url(../../public/img/poly9_yellow.png);
 }
 .b_red {
     background-image: url(../../public/img/poly_line_beige.png);
 }
 @media (max-width: 1440px) {
+    .sec_wrap > .b_black > div {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
     .cir_wrap {
         width: 100%;
         display: flex;
@@ -239,48 +301,137 @@ export default {
     }
     .circle {
         position: relative;
-        width: 50%;
-        padding-top: 50%;
+        width: 200px;
+        padding-top: 200px;
         border-radius: 50%;
     }
-    .circle h4 {
+    .circle h3 {
         display: none;
     }
-    .mobile {
+    h4.mobile {
         display: block;
     }
 }
-@media (max-width: 834px) {
-    .sec_wrap > .b_black {
-        width: 100%;
-        height: 50vh;
-        display: flex;
+@media (max-width: 1020px) {
+    .cir_wrap {
         justify-content: center;
-        align-items: center;
     }
-    .circle_wrap {
-        width: 100%;
-        box-sizing: border-box;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
+    .circle h3 {
+        display: block;
+        font-size: 20px;
     }
-    .circle {
-        flex: 1;
-        overflow: hidden;
+    h4.mobile {
+        display: none;
     }
 }
-@media (max-width: 500px) {
-    .circle_wrap {
+@media (max-width: 834px) {
+    .desktop {
+        display: none;
+    }
+    .sec_wrap > .b_black {
+        position: relative;
         width: 100%;
+        height: 50vh;
+        align-items: center;
+        padding-bottom: 25px;
         box-sizing: border-box;
+    }
+    .sec_wrap > .b_black > div {
+        width: 100%;
+        height: 100%;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 15px;
+        align-items: center;
+        gap: 0;
+    }
+    .cir_wrap {
+        width: 100%;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        gap: 50px;
+        padding: 10px 0;
+        box-sizing: border-box;
+        transition: 0.5s ease-in-out;
+    }
+    .cir_wrap:hover {
+        padding-left: 20px;
+        background-color: #3a3b40;
+    }
+
+    .circle {
+        position: relative;
+        width: 9vh;
+        padding-top: 9vh;
+        border-radius: 50%;
+    }
+    .circle:hover {
+        transform: rotate(0);
+        transition: none;
+    }
+    .circle h3 {
+        display: none;
+    }
+    h4.mobile {
+        display: block;
+    }
+    /* .desktop {
+        display: none;
+    }
+    .sec_wrap > .b_black {
+        position: relative;
+        width: 100%;
+        height: 50vh;
+        align-items: center;
+        padding-bottom: 0;
+        box-sizing: border-box;
+    }
+    .arrow_wrap.mobile {
+        display: none;
+        flex-direction: column;
+        top: 50%;
+        width: 150px;
+        align-items: center;
+        transform: translateY(-80%) rotate(30deg);
+    }
+    .arrow_wrap p {
+        transform: translate3d(70%, -30%, 0);
+        margin-right: 0;
+    }
+
+    .arrow {
+        width: 50px;
+    }
+    @keyframes arrow {
+        from {
+            right: -32%;
+        }
+        to {
+            right: -36%;
+        }
+    }
+    .sec_wrap > .b_black > div {
+        position: absolute;
+        left: 25px;
+        width: 80%;
+        height: fit-content;
+        gap: 20px;
+    }
+    .cir_wrap {
+        width: calc(50% - 10px);
     }
     .circle {
-        width: calc(50% - 7.5px);
+        position: relative;
+        width: 100%;
+        padding-top: 100%;
+        border-radius: 50%;
     }
+    .circle h3 {
+        display: block;
+        font-size: 18px;
+    } */
+}
+@media (max-width: 500px) {
 }
 </style>

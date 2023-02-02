@@ -188,17 +188,46 @@ span.line .b_yellow {
     width: fit-content;
     height: fit-content;
 }
+@media (max-width: 1440px) {
+    .portrait {
+        width: 80%;
+        height: auto;
+    }
+    .portrait > img {
+        width: 100%;
+        height: auto;
+    }
+}
 @media (max-width: 834px) {
     .sec_wrap > .b_yellow {
         height: 50vh;
     }
+    .b_beige {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+        align-items: center;
+    }
     .portrait {
-        width: auto;
-        height: 70%;
-        margin-top: 100px;
+        width: 68%;
+        height: auto;
     }
     .portrait > img {
-        height: 100%;
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-width: 650px) {
+    .portrait {
+        width: 90%;
+        height: auto;
+    }
+    .b_green {
+        padding: 15px;
+    }
+    .b_green > h3 {
+        font-size: 20px;
     }
 }
 </style>
