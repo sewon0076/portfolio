@@ -30,8 +30,8 @@
                     <a href="https://www.instagram.com/p/CZNjJGiPudk/"><img src="../../public/img/insta9.png" alt="" /></a>
                 </div>
             </div>
-            <div class="right b_green">
-                <div class="title p50all" v-bind:class="{ fixed: change }"><img src="../../public/img/hobby_title.png" alt="" /></div>
+            <div class="right b_green p50all" v-bind:class="{ fixed: change }">
+                <div class="title p50all" v-bind:class="{ fixed: change_1 }"><img src="../../public/img/hobby_title.png" alt="" /></div>
             </div>
         </div>
     </div>
@@ -41,6 +41,7 @@ export default {
     data() {
         return {
             change: false,
+            change_1: false,
         };
     },
     mounted() {
@@ -58,11 +59,23 @@ export default {
             // this.title = document.querySelectorAll(".title");
             const sec7 = document.getElementById("experiences");
             let sec7h = sec7.offsetTop;
-            let num = sec7.clientHeight / 2;
-            if (sec7h <= window.scrollY && sec7h + num >= window.scrollY) {
-                this.change = true;
-            } else if (sec7h > window.scrollY || sec7h + num < window.scrollY) {
-                this.change = false;
+            let num = sec7.clientHeight / 2 + 50;
+            if (vw > 834) {
+                if (sec7h <= window.scrollY && sec7h + num >= window.scrollY) {
+                    this.change_1 = true;
+                    console.log(sec7h + vh / 2);
+                    console.log("scroll=" + window.scrollY);
+                } else if (sec7h > window.scrollY || sec7h + num < window.scrollY) {
+                    this.change_1 = false;
+                }
+            } else {
+                if (sec7h <= window.scrollY && sec7h + num >= window.scrollY) {
+                    this.change = true;
+                    this.change_1 = false;
+                } else if (sec7h > window.scrollY || sec7h + num < window.scrollY) {
+                    this.change = false;
+                    this.change_1 = false;
+                }
             }
         },
     },
@@ -93,14 +106,15 @@ export default {
     height: 100%;
 }
 .title {
-    position: relative;
+    position: absolute;
+    top: 100px;
+    right: 0;
     width: 100%;
-    margin-top: 100px;
 }
 .title.fixed {
     position: fixed;
     width: 50%;
-    top: 0;
+    top: 100px;
     right: 0;
 }
 .title > img {
@@ -109,6 +123,28 @@ export default {
 .right {
     position: relative;
 }
+.right.fixed {
+    position: fixed;
+    width: 50%;
+    top: 0;
+    right: 0;
+}
+@media (max-width: 1440px) {
+    .left {
+        gap: 25px;
+    }
+    .left > div {
+        width: calc(50% - 12.5px);
+    }
+    .left > div img {
+        width: 100%;
+    }
+    .left > div:nth-child(7),
+    .left > div:nth-child(8),
+    .left > div:nth-child(9) {
+        display: none;
+    }
+}
 @media (max-width: 834px) {
     .sec_wrap {
         flex-wrap: wrap-reverse;
@@ -116,17 +152,26 @@ export default {
     .right {
         height: 15vh;
     }
+    .right.fixed {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        right: 0;
+    }
+    .title {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: auto;
+        height: calc(100% - 100px);
+    }
     .left {
         height: 85vh;
-        gap: 40px;
+        gap: 20px;
     }
     .left > div {
-        width: calc(50% - 20px);
+        width: calc(33.3333% - 13.333333px);
         height: calc(33.3333% - 26.66666px);
-    }
-    .left > div:nth-child(8),
-    .left > div:nth-child(9) {
-        display: none;
     }
 }
 </style>
