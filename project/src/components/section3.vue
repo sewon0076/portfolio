@@ -19,6 +19,36 @@
                             2022.09 ~ 2023.02 - 국비지원 프론트엔드 수료
                         </p>
                     </div>
+                    <div class="content_wrap mobile">
+                        <p>EXPERIENCES</p>
+                        <div class="ex_wrap">
+                            <p>
+                                2022.05
+                                <br />
+                                거제시 성년의 날 축하카드 편집 및 제작
+                            </p>
+                            <p>
+                                2021.12 - 2022.02
+                                <br />
+                                거제시 교육지원청 학교폭력 교육자료 '더 나은 나'- 삽화 및 편집/제작
+                            </p>
+                            <p>
+                                2021.12 - 2022.01
+                                <br />
+                                거제시 교육지원청 초/중등 애도교육 자료 삽화 및 피피티 제작
+                            </p>
+                            <p>
+                                2021.12
+                                <br />
+                                청소년 상담복지센터 소식지 삽화 및 편집/제작
+                            </p>
+                            <p>
+                                2021.09~
+                                <br />
+                                중.고등학교 진로특강 - 캐릭터/광고 디자인
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 <div class="content2" v-if="!show">
                     <div class="content_wrap">
@@ -77,13 +107,16 @@ export default {
     // data를 쓰고 있으면 this.뭐라고 적어야함
     methods: {
         accordion: function () {
-            console.log("sec5");
-            if (this.accor == true) {
-                this.show = !this.show;
-                this.opacity = !this.opacity;
-            } else if (this.accor == false) {
-                this.show = !this.show;
-                this.opacity = !this.opacity;
+            if (window.innerWidth < 834) {
+                this.show = true;
+            } else {
+                if (this.accor == true) {
+                    this.show = !this.show;
+                    this.opacity = !this.opacity;
+                } else if (this.accor == false) {
+                    this.show = !this.show;
+                    this.opacity = !this.opacity;
+                }
             }
         },
     },
@@ -102,15 +135,17 @@ export default {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 25px;
 }
-.content1 > span {
+/* .content1 > span {
     display: block;
     width: 100%;
-    height: 2px;
+    height: 1.5px;
     background-color: #202124;
-}
+} */
 .content_wrap > p:nth-child(1) {
+    font-size: 22px;
     font-weight: 900;
     margin-bottom: 10px;
 }
@@ -142,6 +177,9 @@ p {
     opacity: 0.5;
     transition: 0.5s;
 }
+.mobile {
+    display: none;
+}
 @media (max-width: 834px) {
     .sec_wrap {
         flex-wrap: wrap-reverse;
@@ -160,6 +198,20 @@ p {
         padding: 20px 20px;
         box-sizing: border-box;
         transition: 0.5s;
+    }
+    .mobile {
+        display: block;
+    }
+    .content2 {
+        display: none;
+    }
+    .btn2 {
+        display: none;
+    }
+}
+@media (max-width: 1440px) {
+    p {
+        font-size: 16px;
     }
 }
 @media (max-width: 600px) {

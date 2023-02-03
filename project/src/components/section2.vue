@@ -141,11 +141,6 @@ span.line .b_yellow {
 .line_cir > img {
     width: 100%;
 }
-.giveup {
-    /* position: absolute; */
-    bottom: 0px;
-    right: 0;
-}
 .b_beige {
     display: flex;
     flex-direction: column;
@@ -189,6 +184,34 @@ span.line .b_yellow {
     height: fit-content;
 }
 @media (max-width: 1440px) {
+    .top {
+        width: 100%;
+        height: 40%;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 0;
+    }
+    .line {
+        padding: 10px;
+        box-sizing: border-box;
+        transform: rotate(90deg);
+    }
+    .title_wrap {
+        gap: 50px;
+    }
+    .bottom {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        margin-top: 0;
+        gap: 50px;
+    }
+    .star {
+        width: 38px;
+    }
+
     .portrait {
         width: 80%;
         height: auto;
@@ -201,6 +224,21 @@ span.line .b_yellow {
 @media (max-width: 834px) {
     .sec_wrap > .b_yellow {
         height: 50vh;
+    }
+    .top {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: center;
+        gap: 35px;
+    }
+    .line {
+        width: 25%;
+        transform: rotate(0);
+    }
+    .bottom {
+        flex-direction: row;
+        gap: 35px;
     }
     .b_beige {
         display: flex;

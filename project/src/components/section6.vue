@@ -86,6 +86,7 @@ export default {
 .sec_wrap {
     display: block;
     width: 100%;
+    overflow: hidden;
 }
 .section6 {
     width: 100%;

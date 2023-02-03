@@ -3,6 +3,7 @@ import HomeView from "../views/HomeView.vue";
 import seomoon from "../views/SeomoonView.vue";
 import wouldyou from "../views/WouldyouView.vue";
 import bfoc from "../views/WouldyouView.vue";
+import resume from "../views/resumeView.vue";
 
 const routes = [
     {

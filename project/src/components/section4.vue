@@ -87,6 +87,7 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     height: 50vh;
+    overflow: hidden;
 }
 .circle_wrap {
     width: 100%;
