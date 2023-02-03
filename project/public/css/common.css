@@ -16,6 +16,10 @@
     padding: 0 25px 0 25px;
     box-sizing: border-box;
 }
+.p25all {
+    padding: 25px;
+    box-sizing: border-box;
+}
 /* ======font */
 .kr {
     font-family: "NanumSquare", san-serif;

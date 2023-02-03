@@ -4,8 +4,14 @@
             <h2 class="beige">TOY-PROJECT / CLONE-CODING</h2>
             <div class="content_wrap">
                 <swiper
-                    :slidesPerView="4"
-                    :spaceBetween="50"
+                    :slidesPerView="3"
+                    :breakpoints="{
+                        '834': {
+                            slidesPerView: 4,
+                            spaceBetween: 50,
+                        },
+                    }"
+                    :spaceBetween="25"
                     :pagination="{
                         clickable: true,
                     }"
@@ -86,6 +92,7 @@ export default {
 .sec_wrap {
     display: block;
     width: 100%;
+    height: 100%;
     overflow: hidden;
 }
 .section6 {

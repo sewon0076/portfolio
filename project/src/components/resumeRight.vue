@@ -1,7 +1,7 @@
 <template>
     <div class="p50all wrap">
         <div class="portrait">
-            <img src="" alt="" />
+            <img src="../../public/img/portrait_formal.png" alt="" />
         </div>
         <div class="personal">
             <div class="name">
@@ -72,10 +72,11 @@ p {
 }
 .portrait > img {
     position: absolute;
-    width: 100%;
+    width: 70%;
 
-    top: 0;
-    left: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .personal {
     width: 100%;
