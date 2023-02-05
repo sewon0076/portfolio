@@ -6,9 +6,13 @@
                 <swiper
                     :slidesPerView="3"
                     :breakpoints="{
-                        '834': {
+                        '1440': {
                             slidesPerView: 4,
                             spaceBetween: 50,
+                        },
+                        '834': {
+                            slidesPerView: 4,
+                            spaceBetween: 25,
                         },
                     }"
                     :spaceBetween="25"

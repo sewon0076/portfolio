@@ -272,6 +272,7 @@ export default {
     background-repeat: no-repeat;
     background-color: lightblue;
     overflow: hidden;
+    margin-bottom: 50px;
 }
 
 .project2:hover {
@@ -358,6 +359,12 @@ export default {
     padding: 0 25px;
     box-sizing: border-box;
     line-height: 50px;
+}
+@media (max-width:1440px) {
+    .project {
+    margin-bottom: 25px;
+}
+    
 }
 @media (max-width: 834px) {
     .left {

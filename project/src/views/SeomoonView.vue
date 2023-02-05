@@ -2,10 +2,10 @@
     <div class="SeomoonView">
         <div class="cir_btns">
             <div class="b_pink f_cir">VIEW<br />WEBSITE</div>
-            <a href="">
+            <a href="/bfoc">
                 <div class="pink_l circle">BFOC</div>
             </a>
-            <a href="">
+            <a href="/wouldyou">
                 <div class="pink_l circle">WOULD<br />YOU<br />LIKE</div>
             </a>
             <a href="/">
@@ -98,6 +98,7 @@ export default {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+    overflow: hidden;
 }
 /* #sm_cir > .circle {
     color: #fff;
