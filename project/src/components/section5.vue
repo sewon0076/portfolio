@@ -222,6 +222,9 @@ export default {
         goWouldyou: function () {
             window.location.href = "https://wouldyoulike.herokuapp.com/";
         },
+        goBfoc: function () {
+            window.location.href = "https://bfoc.herokuapp.com/";
+        },
     },
 };
 </script>
@@ -360,11 +363,10 @@ export default {
     box-sizing: border-box;
     line-height: 50px;
 }
-@media (max-width:1440px) {
+@media (max-width: 1440px) {
     .project {
-    margin-bottom: 25px;
-}
-    
+        margin-bottom: 25px;
+    }
 }
 @media (max-width: 834px) {
     .left {

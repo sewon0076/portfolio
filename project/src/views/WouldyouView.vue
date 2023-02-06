@@ -11,7 +11,7 @@
             <a href="/">
                 <div class="pink_l circle">GO<br />MAIN</div>
             </a>
-            <a href="https://seomoon-siot.herokuapp.com/">
+            <a href="https://wouldyoulike.herokuapp.com/">
                 <div class="pink_l circle">VIEW<br />WEBSITE</div>
             </a>
         </div>
@@ -109,4 +109,3 @@ export default {
     background-color: #fff;
 }
 </style>
-
