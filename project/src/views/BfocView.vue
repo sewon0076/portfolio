@@ -2,8 +2,8 @@
     <div class="BfocView">
         <div class="cir_btns">
             <div class="b_apple f_cir">VIEW<br />WEBSITE</div>
-            <a href="/bfoc">
-                <div class="pink_l circle">BFOC</div>
+            <a href="/wouldyou">
+                <div class="pink_l circle">WOULD<br />YOU</div>
             </a>
             <a href="/seomoon">
                 <div class="pink_l circle">SEOMOON</div>

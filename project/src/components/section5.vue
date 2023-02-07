@@ -273,11 +273,13 @@ export default {
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
-    background-color: lightblue;
+    /* background-color: lightblue; */
     overflow: hidden;
     margin-bottom: 50px;
 }
-
+.project1:hover {
+    background-image: url(../../public/img/seomoon.gif);
+}
 .project2:hover {
     background-image: url(../../public/img/wouldyou.gif);
 }

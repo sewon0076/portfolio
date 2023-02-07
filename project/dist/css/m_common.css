@@ -70,6 +70,7 @@
     background-color: #f3f3f3;
 }
 .function .comple {
+    font-size: larger;
     margin-top: 20px;
 }
 .content p {
@@ -83,7 +84,7 @@
     min-height: 50vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     padding: 200px 0 100px;
 }
 .function .list:last-child {
