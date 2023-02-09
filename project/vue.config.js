@@ -2,6 +2,8 @@ const { defineConfig } = require("@vue/cli-service");
 module.exports = defineConfig({
     transpileDependencies: true,
     lintOnSave: false,
+    publicPath: "/portfolio/",
+    outputDir: "./docs",
     // publicPath: "",
     //deploy할때는 이거 풀고,
     // publicPath: "/portfolio/", //레파지토리명
