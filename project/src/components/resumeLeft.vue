@@ -133,7 +133,7 @@ p {
     font-family: "NanumSquare", san-serif;
 }
 .en {
-    font-family: Helvetica, sans-serif;
+    font-family: roboto, sans-serif;
 }
 .left.wrap {
     display: flex;

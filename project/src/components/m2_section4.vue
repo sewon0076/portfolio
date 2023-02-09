@@ -3,7 +3,7 @@
         <div class="sec_wrap">
             <div class="p50all left">
                 <div class="img_wrap">
-                    <div class="img" v-bind:class="{ fixed: change, func1: func1, func2: func2, func3: func3, func4: func4 }">
+                    <div class="img" v-bind:class="{ fixed: change, func: func, func1: func1, func2: func2, func3: func3, func4: func4 }">
                         <div></div>
                     </div>
                 </div>
@@ -11,6 +11,17 @@
             <div class="b_black p50all">
                 <h2 class="white" v-bind:class="{ fixed: change }">FUNCTIONS</h2>
                 <div class="content">
+                    <div class="list">
+                        <h3 class="mint kr bold">공지사항 작성 / 수정 / 삭제</h3>
+                        <p class="white kr">
+                            공지사항을 작성하고 각각의 번호를 받아와 불러오고 수정 / 삭제가 가능하도록 만들었다. 작성을 할때 선택한 private /
+                            public중의 카테고리에 따라 all버튼을 누르면 모든 공지사항이 확인가능하고, administar / public을 선택하면 각각에 맞는
+                            카테고리를 가진 공지사항만 나오도록 해주었다. 카테고리를 input에 넣어 hidden처리해주고 defaultValue를 받아와 조건문을
+                            걸어주는 스크립트로 구현을 해주었다.
+                        </p>
+                        <p class="bold mint comple">보완해야 할 점</p>
+                        <p class="white">코드를 조금 줄일 수 있으면 좋을 것 같다.</p>
+                    </div>
                     <div class="list">
                         <h3 class="mint kr bold">journal 작성 / 수정 / 삭제</h3>
                         <p class="white kr">
@@ -79,7 +90,8 @@ export default {
     data() {
         return {
             change: false,
-            func1: true,
+            func: true,
+            func1: false,
             func2: false,
             func3: false,
             func4: false,
@@ -100,22 +112,27 @@ export default {
             } else {
                 this.change = false;
             }
-            if (window.scrollY < lists[1].offsetTop) {
+            if (window.scrollY >= lists[0].offsetTop && window.scrollY < lists[1].offsetTop) {
+                this.func = true;
+            } else {
+                this.func = false;
+            }
+            if (window.scrollY >= lists[1].offsetTop && window.scrollY < lists[2].offsetTop) {
                 this.func1 = true;
             } else {
                 this.func1 = false;
             }
-            if (window.scrollY >= lists[1].offsetTop && window.scrollY < lists[2].offsetTop) {
+            if (window.scrollY >= lists[2].offsetTop && window.scrollY < lists[3].offsetTop) {
                 this.func2 = true;
             } else {
                 this.func2 = false;
             }
-            if (window.scrollY >= lists[2].offsetTop && window.scrollY < lists[3].offsetTop) {
+            if (window.scrollY >= lists[3].offsetTop && window.scrollY < lists[4].offsetTop) {
                 this.func3 = true;
             } else {
                 this.func3 = false;
             }
-            if (window.scrollY >= lists[3].offsetTop) {
+            if (window.scrollY >= lists[4].offsetTop) {
                 this.func4 = true;
             } else {
                 this.func4 = false;
@@ -127,6 +144,33 @@ export default {
 <style scoped>
 .function h2.fixed {
     background-color: #060606;
+}
+
+.img:before {
+    display: block;
+    content: "";
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+}
+.img.func:before {
+    content: "NOTICE WRITE / SORT BY CATEGORY";
+}
+.img.func1:before {
+    content: "JOURNAL WRITE";
+}
+.img.func2:before {
+    content: "LIKE / VIEW";
+}
+.img.func3:before {
+    content: "COUNT DOWN";
+}
+.img.func4:before {
+    content: "REACTIVE BY innerWidth";
+}
+.img.func > div {
+    background-image: url(../../public/img/would_notice.gif);
 }
 .img.func1 > div {
     background-image: url(../../public/img/would_journal.gif);

@@ -47,7 +47,7 @@ p {
     font-family: "NanumSquare", san-serif;
 }
 .en {
-    font-family: Helvetica, sans-serif;
+    font-family: roboto, sans-serif;
 }
 .wrap {
     position: relative;
@@ -74,7 +74,7 @@ p {
     position: absolute;
     width: 80%;
 
-    top:10%;
+    top: 10%;
     left: 50%;
     transform: translateX(-50%);
 }

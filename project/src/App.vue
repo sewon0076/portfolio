@@ -8,7 +8,7 @@
 
 <style>
 #app {
-    font-family: Helvetica, sans-serif;
+    font-family: roboto, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #202124;
