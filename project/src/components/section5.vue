@@ -13,7 +13,7 @@
                         <div class="b_blue"></div>
                         <h3>VIEW WEBSITE</h3>
                     </div>
-                    <a href="/seomoon" class="ex_wrap">
+                    <router-link to="/seomoon" class="ex_wrap">
                         <div class="explain">
                             <h3 class="kr">서문야시장 <span>seomoon-night market</span></h3>
                             <p>
@@ -36,7 +36,7 @@
                                 </div>
                             </div>
                         </div>
-                    </a>
+                    </router-link>
                 </div>
                 <div class="mobile_ex p25all">
                     <h3 class="kr">부산문화관광축제조직위원회<span>BFOC</span></h3>
@@ -65,7 +65,7 @@
                         <div class="b_blue"></div>
                         <h3>VIEW WEBSITE</h3>
                     </div>
-                    <a href="/wouldyou" class="ex_wrap">
+                    <router-link to="/wouldyou" class="ex_wrap">
                         <div class="explain">
                             <h3 class="kr">우주라이크 <span>Would you like?</span></h3>
                             <p>
@@ -88,7 +88,7 @@
                                 </div>
                             </div>
                         </div>
-                    </a>
+                    </router-link>
                 </div>
                 <div class="mobile_ex p25all">
                     <h3 class="kr">부산문화관광축제조직위원회<span>BFOC</span></h3>
@@ -117,7 +117,7 @@
                         <div class="b_blue"></div>
                         <h3>VIEW WEBSITE</h3>
                     </div>
-                    <a href="/bfoc" class="ex_wrap">
+                    <router-link to="/bfoc" class="ex_wrap">
                         <div class="explain">
                             <h3 class="kr">부산문화관광축제조직위원회<span>BFOC</span></h3>
                             <p>
@@ -139,7 +139,7 @@
                                 </div>
                             </div>
                         </div>
-                    </a>
+                    </router-link>
                 </div>
                 <div class="mobile_ex p25all">
                     <h3 class="kr">부산문화관광축제조직위원회<span>BFOC</span></h3>
@@ -187,13 +187,6 @@ export default {
             const vw = window.innerWidth;
             // console.log(vw);
             this.title = document.querySelectorAll(".title");
-            // if (window.scrollY > 3 * vh && window.scrollY < 3.8 * vh) {
-            //     this.change = true;
-            //     let num = window.scrollY / vh;
-            //     // console.log("start" + num);
-            // } else if (window.scrollY <= 3 * vh || window.scrollY >= 3.8 * vh) {
-            //     this.change = false;
-            // }
             if (vw > 834) {
                 if (window.scrollY > 3 * vh && window.scrollY < 4 * vh) {
                     this.change = true;
