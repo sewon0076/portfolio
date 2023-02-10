@@ -158,25 +158,8 @@ span.line .b_yellow {
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
     gap: 40px;
-}
-.arrow-next {
-    position: relative;
-    width: 25px;
-    height: 25px;
-}
-
-.arrow-next::after {
-    position: absolute;
-    left: 2.5px;
-    top: 5px;
-    content: "";
-    width: 12.5px; /* 사이즈 */
-    height: 12.5px; /* 사이즈 */
-    border-top: 3px solid #f3ede4; /* 선 두께 */
-    border-right: 3px solid #f3ede4; /* 선 두께 */
-    transform: rotate(45deg); /* 각도 */
 }
 .r_btn {
     display: block;
@@ -222,24 +205,6 @@ span.line .b_yellow {
     }
 }
 @media (max-width: 834px) {
-    .sec_wrap > .b_yellow {
-        height: 50vh;
-    }
-    .top {
-        width: 100%;
-        height: auto;
-        flex-direction: row;
-        justify-content: center;
-        gap: 35px;
-    }
-    .line {
-        width: 25%;
-        transform: rotate(0);
-    }
-    .bottom {
-        flex-direction: row;
-        gap: 35px;
-    }
     .b_beige {
         display: flex;
         flex-direction: column;

@@ -3,14 +3,22 @@
         <div class="sec_wrap">
             <div class="p50all b_yellow">
                 <ul>
-                    <li
-                        class="b_beige"
-                        v-for="(tab, index) in tabs"
-                        :key="index"
-                        @click="currents(index)"
-                        v-bind:class="{ active: current === index }"
-                    >
-                        <h4 class="kr">{{ tab.question }}</h4>
+                    <li v-for="(tab, index) in tabs" :key="index" @click="currents(index)" v-bind:class="{ active: current === index }">
+                        <h4 class="kr b_beige">{{ tab.question }}</h4>
+                        <div class="answer_wrap mobile" :key="index" v-show="current == index">
+                            <p class="kr">
+                                {{ tab.answer }}
+                            </p>
+                            <p class="kr">
+                                {{ tab.answer1 }}
+                            </p>
+                            <p class="kr">
+                                {{ tab.answer2 }}
+                            </p>
+                            <p class="kr">
+                                {{ tab.answer3 }}
+                            </p>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -87,26 +95,23 @@ export default {
 };
 </script>
 <style scoped>
-.b_yellow > ul > .b_beige {
+.b_yellow > ul > li {
     width: 100%;
-    height: 100px;
+    margin-top: 50px;
+}
+.b_yellow > ul > li > h4 {
     padding: 25px;
     box-sizing: border-box;
-    margin-top: 50px;
     opacity: 0.5;
     transition: 0.5s;
 }
-
-.b_yellow > ul > .b_beige.active {
+.b_yellow > ul > li.active > h4 {
     opacity: 1;
     padding-left: 50px;
     transition: 0.5s;
 }
-.b_yellow > ul > .b_beige:nth-child(1) {
-    margin: 0;
-}
-.b_beige > h4 {
-    line-height: 50px;
+.b_yellow > ul > li:nth-child(1) {
+    margin-top: 0;
 }
 span.b_black {
     display: block;
@@ -117,5 +122,33 @@ span.b_black {
 .answer_wrap {
     padding: 50px 0;
     box-sizing: border-box;
+}
+.answer_wrap.mobile {
+    display: none;
+}
+@media (max-width: 834px) {
+    .b_yellow > ul > li > h4 {
+        padding: 15px;
+        transition: 0.5s;
+    }
+    .b_yellow > ul > li.active > h4 {
+        padding-left: 25px;
+        transition: 0.5s;
+    }
+    .answer_wrap.mobile {
+        display: block;
+    }
+    .sec_wrap > .b_beige {
+        display: none;
+    }
+    .answer_wrap {
+        margin-top: 10px;
+        padding: 15px 25px;
+        box-sizing: border-box;
+    }
+    .b_yellow > ul > li {
+        margin-top: 0;
+        margin-bottom: 25px;
+    }
 }
 </style>

@@ -30,8 +30,8 @@
                     <a href="https://www.instagram.com/p/CZNjJGiPudk/"><img src="../../public/img/insta9.png" alt="" /></a>
                 </div>
             </div>
-            <div class="right b_green p50all" v-bind:class="{ fixed: change }">
-                <div class="title p50all" v-bind:class="{ fixed: change_1 }"><img src="../../public/img/hobby_title.png" alt="" /></div>
+            <div class="right b_green p50all">
+                <div class="title p50all" v-bind:class="{ fixed: change }"><img src="../../public/img/hobby_title.png" alt="" /></div>
             </div>
         </div>
     </div>
@@ -56,26 +56,14 @@ export default {
         scrollChange: function () {
             const vh = window.innerHeight;
             const vw = window.innerWidth;
-            // this.title = document.querySelectorAll(".title");
-            const sec7 = document.getElementById("experiences");
-            let sec7h = sec7.offsetTop;
-            let num = sec7.clientHeight / 2 + 50;
-            if (vw > 834) {
-                if (sec7h <= window.scrollY && sec7h + num >= window.scrollY) {
-                    this.change_1 = true;
-                    console.log(sec7h + vh / 2);
-                    console.log("scroll=" + window.scrollY);
-                } else if (sec7h > window.scrollY || sec7h + num < window.scrollY) {
-                    this.change_1 = false;
-                }
-            } else {
-                if (sec7h <= window.scrollY && sec7h + num >= window.scrollY) {
-                    this.change = true;
-                    this.change_1 = false;
-                } else if (sec7h > window.scrollY || sec7h + num < window.scrollY) {
-                    this.change = false;
-                    this.change_1 = false;
-                }
+            const sec7 = document.querySelector(".section7");
+            let top = sec7.offsetTop;
+            let sec7H = sec7.clientHeight;
+            this.title = document.querySelectorAll(".title");
+            if (window.scrollY >= top && window.scrollY < top + sec7H - 200) {
+                this.change = true;
+            } else if (window.scrollY <= top || window.scrollY >= top + sec7H - 200) {
+                this.change = false;
             }
         },
     },
@@ -107,14 +95,14 @@ export default {
 }
 .title {
     position: absolute;
-    top: 100px;
+    top: 0px;
     right: 0;
     width: 100%;
 }
 .title.fixed {
     position: fixed;
     width: 50%;
-    top: 100px;
+    top: 0px;
     right: 0;
 }
 .title > img {
@@ -152,18 +140,24 @@ export default {
     .right {
         height: 15vh;
     }
-    .right.fixed {
-        position: fixed;
-        width: 100%;
-        top: 0;
-        right: 0;
-    }
     .title {
         position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         top: 0;
         right: 0;
         width: auto;
-        height: calc(100% - 100px);
+        height: 100%;
+        padding: 0 40px;
+        box-sizing: border-box;
+    }
+    .title.fixed {
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 15vh;
+        background-color: #8dceb1;
     }
     .left {
         height: 85vh;
@@ -172,6 +166,33 @@ export default {
     .left > div {
         width: calc(33.3333% - 13.333333px);
         height: calc(33.3333% - 26.66666px);
+    }
+}
+@media (max-width: 450px) {
+    .right {
+        height: 10vh;
+    }
+    .title {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 40px;
+        top: 0;
+        right: 0;
+        width: auto;
+        height: 100%;
+    }
+    .title.fixed {
+        height: 10vh;
+    }
+    .left {
+        height: 85vh;
+        gap: 10px;
+    }
+    .left > div {
+        width: calc(50% - 5px);
+        height: calc(33.3333% - 5px);
     }
 }
 </style>
