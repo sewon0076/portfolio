@@ -17,21 +17,50 @@
                     <p>E-MAIL : sewon0076@naver.com</p>
                     <p>INSTAGRAM : @31_luminous</p>
                 </div>
-                <div class="top_cir" v-bind:class="{ size: mobile }">
-                    <div class="circle" id="c1"><img src="" alt="" /></div>
-                    <div class="circle" id="c2"><img src="" alt="" /></div>
-                    <div class="circle" id="c3"><img src="" alt="" /></div>
-                    <div class="circle" id="c4"><img src="" alt="" /></div>
-                    <div class="circle" id="c5"><img src="" alt="" /></div>
-                    <div class="circle" id="c6"><img src="" alt="" /></div>
+                <div class="point_cir">
+                    <div class="circle" id="c1">
+                        <img src="../../public/img/Asset1.png" alt="" />
+                    </div>
+                    <div class="circle" id="c2">
+                        <img src="../../public/img/Asset2.png" alt="" />
+                    </div>
+                    <div class="circle" id="c13">
+                        <img src="../../public/img/Asset20.png" alt="" />
+                    </div>
                 </div>
-                <div class="bottom_cir" v-bind:class="{ size: mobile }">
-                    <div class="circle" id="c7"><img src="" alt="" /></div>
-                    <div class="circle" id="c8"><img src="" alt="" /></div>
-                    <div class="circle" id="c9"><img src="" alt="" /></div>
-                    <div class="circle" id="c10"><img src="" alt="" /></div>
-                    <div class="circle" id="c11"><img src="" alt="" /></div>
-                    <div class="circle" id="c12"><img src="" alt="" /></div>
+                <div class="top_cir">
+                    <div class="circle" id="c3">
+                        <img src="../../public/img/Asset19.png" alt="" />
+                    </div>
+                    <div class="circle" id="c4">
+                        <img src="../../public/img/Asset8.png" alt="" />
+                    </div>
+                    <div class="circle" id="c5">
+                        <img src="../../public/img/Asset16.png" alt="" />
+                    </div>
+                    <div class="circle" id="c6">
+                        <img src="../../public/img/Asset3.png" alt="" />
+                    </div>
+                </div>
+                <div class="bottom_cir" v-bind:class="({ size: mobile }, { action: fall })">
+                    <div class="circle" id="c7">
+                        <img src="../../public/img/Asset18.png" alt="" />
+                    </div>
+                    <div class="circle" id="c8">
+                        <img src="../../public/img/Asset15.png" alt="" />
+                    </div>
+                    <div class="circle" id="c9">
+                        <img src="../../public/img/Asset9.png" alt="" />
+                    </div>
+                    <div class="circle" id="c10">
+                        <img src="../../public/img/Asset7.png" alt="" />
+                    </div>
+                    <div class="circle" id="c11">
+                        <img src="../../public/img/Asset5.png" alt="" />
+                    </div>
+                    <div class="circle" id="c12">
+                        <img src="../../public/img/Asset1.png" alt="" />
+                    </div>
                 </div>
                 <!-- <div class="circle_wrap1">
                     <div class="c_circle1" id="c2" v-bind:class="{ action: fall }"><img src="../../public/img/Asset8.png" alt="" /></div>
@@ -61,7 +90,9 @@
     </div>
 </template>
 <script>
+import contact_js from "../../public/js/contact.js";
 export default {
+    contact_js,
     data() {
         return {
             mobile: false,
@@ -69,33 +100,34 @@ export default {
         };
     },
     mounted() {
-        document.addEventListener("scroll", this.scrollChange);
+        // document.addEventListener("scroll", this.scrollChange);
         let vw = window.innerWidth;
+        let w = vw / 7;
+        let w_2 = vw / 2 / 7;
+        const point_cir = document.querySelector(".point_cir");
+        const circle = document.querySelectorAll(".section8 .circle");
         if (vw < 834) {
             this.mobile = !this.mobile;
+            // point_cir.style.marginLeft = w + "px";
+            for (let i = 0; i < circle.length; i++) {
+                circle[i].style.width = w + "px";
+                circle[i].style.height = w + "px";
+            }
         } else {
             this.mobile = false;
-        }
-    },
-    methods: {
-        scrollChange: function () {
-            const vh = window.innerHeight;
-            const vw = window.innerWidth;
-            const sec8 = document.querySelector(".section8");
-            let top = sec8.offsetTop;
-            let sec8H = sec8.clientHeight;
-            if (window.scrollY >= top) {
-                this.fall = true;
-            } else if (window.scrollY < top) {
-                this.fall = false;
+            // point_cir.style.marginLeft = w_2 + "px";
+            for (let i = 0; i < circle.length; i++) {
+                circle[i].style.width = w_2 + "px";
+                circle[i].style.height = w_2 + "px";
             }
-        },
+        }
     },
 };
 </script>
 <style scoped>
 .sec_wrap > div {
     height: 50vh;
+    overflow: hidden;
 }
 .left p {
     font-weight: 800;
@@ -109,7 +141,7 @@ export default {
     gap: 12.5px;
 }
 .right.b_yellow.bg {
-    background-color: #202124;
+    background-color: #060606;
 }
 .right.b_yellow.bg > h2,
 .right.b_yellow.bg p {
@@ -119,6 +151,7 @@ export default {
     position: relative;
     overflow: hidden;
 }
+.point_cir,
 .top_cir,
 .bottom_cir {
     position: absolute;
@@ -127,63 +160,40 @@ export default {
     width: 100%;
     display: flex;
 }
+.point_cir {
+    justify-content: space-between;
+}
+.top_cir {
+    justify-content: space-evenly;
+}
+.bottom_cir {
+    justify-content: space-between;
+}
 .circle {
-    position: relative;
-    flex: 1;
-    padding-top: 100%;
-    background-color: #f3ede4;
+    width: calc(100% / 7.5);
+    height: 70px;
     border-radius: 50%;
 }
+.top_cir > .circle,
+.bottom_cir > .circle,
+.point_cir > .circle {
+    transform: translate3d(0, -100%, 0);
+}
+.point_cir > .circle#c2 {
+    transform: translate3d(100%, -100%, 0);
+}
+.top_cir > .circle#c4 {
+    transform: translate3d(-9%, -100%, 0);
+}
+
+.bottom_cir > .circle#c7 {
+    transform: translate3d(12%, -100%, 0);
+}
+.bottom_cir > .circle#c11 {
+    transform: translate3d(9%, -100%, 0);
+}
 .circle > img {
-    top: 0;
-    left: 0;
-    position: absolute;
     width: 100%;
-}
-/* .c_circle1:nth-child(2n) {
-    margin-left: -50px;
-}
-#c2 {
-    transform: translate3d(-20%, 0, 0);
-}
-#c9 {
-    transform: translate3d(30%, 0, 0);
-}
-#c5 {
-    transform: translate3d(-10%, 0, 0);
-}
-
-#c8 {
-    transform: translate3d(10%, 0, 0);
-}
-
-.c_circle,
-.c_circle1,
-.c_circle2 {
-    width: 120px;
-}
-.c_circle1 > img {
-    width: 100%;
-}
-.c_circle > img {
-    width: 100%;
-}
-.c_circle2 > img {
-    width: 100%;
-}
-.c_circle.none {
-    display: none;
-}
-.c_circle1.none {
-    display: none;
-} */
-@keyframes fall_1 {
-    from {
-        transform: translateY(-200%);
-    }
-    to {
-        transform: translateY(0);
-    }
 }
 @media (max-width: 834px) {
     .left {
@@ -198,11 +208,6 @@ export default {
     }
     .info p {
         font-weight: 900;
-    }
-    .c_circle,
-    .c_circle1,
-    .c_circle2 {
-        width: 90px;
     }
 }
 </style>
