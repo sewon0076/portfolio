@@ -26,6 +26,7 @@ export default {
     width: 100%;
     height: 100%;
     display: flex;
+    flex-wrap: wrap;
 }
 .wrap > div:nth-child(1) {
     width: 400px;
@@ -38,5 +39,19 @@ export default {
 .resume {
     width: 100%;
     height: 100vh;
+}
+@media (max-width: 834px) {
+    .resume {
+        width: 100%;
+        height: auto;
+    }
+    .wrap > div:nth-child(1) {
+        width: 100%;
+        height: 100vh;
+    }
+    .wrap > div:nth-child(2) {
+        width: 100%;
+        height: 100%;
+    }
 }
 </style>

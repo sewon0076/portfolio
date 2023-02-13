@@ -113,4 +113,22 @@ p {
     padding: 20px 0 10px;
     box-sizing: border-box;
 }
+@media (max-width: 834px) {
+    .portrait {
+        width: 50%;
+        padding-top: 50%;
+    }
+
+    /* .education .title .line.b_black {
+        background-color: #8dceb1;
+    }
+    .education .title h4 {
+        color: #8dceb1;
+    } */
+}
+@media (max-width: 450px) {
+    p {
+        font-size: 14px;
+    }
+}
 </style>

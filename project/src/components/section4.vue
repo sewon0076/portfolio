@@ -106,6 +106,10 @@
     padding-top: 100%;
     border-radius: 50%;
     overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
 }
 .wave1 {
     position: absolute;

@@ -29,15 +29,15 @@ $(window).ready(function () {
         } else if (scrT >= top - vh_2 - 2 && vw > 834) {
             $(".point_cir>.circle").each(function () {
                 $(this).delay(parseInt(Math.random() * 3) * 600);
-                $(this).animate({ marginTop: vh / 2 - cW * 1.78 });
+                $(this).animate({ marginTop: sec8H - cW * 1.6 });
             });
             $(".top_cir > .circle").each(function () {
                 $(this).delay(parseInt(Math.random() * 6) * 100);
-                $(this).animate({ marginTop: vh / 2 - cW * 0.92 });
+                $(this).animate({ marginTop: sec8H - cW * 0.92 });
             });
             $(".bottom_cir > .circle").each(function () {
                 $(this).delay(parseInt(Math.random() * 6) * 30);
-                $(this).animate({ marginTop: vh / 2 });
+                $(this).animate({ marginTop: sec8H });
             });
         } else if (scrT < top) {
             return;

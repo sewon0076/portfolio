@@ -88,6 +88,24 @@ p {
 .b_green {
     background-color: #8dceb1;
 }
+/* =========================================icon */
+.arrow-next {
+    position: relative;
+    width: 25px;
+    height: 25px;
+}
+
+.arrow-next::after {
+    position: absolute;
+    left: 2.5px;
+    top: 5px;
+    content: "";
+    width: 12.5px; /* 사이즈 */
+    height: 12.5px; /* 사이즈 */
+    border-top: 3px solid #f3ede4; /* 선 두께 */
+    border-right: 3px solid #f3ede4; /* 선 두께 */
+    transform: rotate(45deg); /* 각도 */
+}
 @media (max-width: 1440px) {
     /* =========padding */
     .p50all {
@@ -148,6 +166,27 @@ p {
     }
     p {
         font-size: 18px;
+        line-height: 1.5;
+    }
+}
+@media (max-width: 450px) {
+    .p50all {
+        padding: 15px;
+    }
+    h2 {
+        font-size: 22px;
+        letter-spacing: 0.1em;
+    }
+    h3 {
+        font-size: 18px;
+        letter-spacing: 0.1em;
+    }
+    h4 {
+        font-size: 16px;
+        letter-spacing: 0.1em;
+    }
+    p {
+        font-size: 14px;
         line-height: 1.5;
     }
 }

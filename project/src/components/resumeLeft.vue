@@ -127,6 +127,27 @@
         </div>
     </div>
 </template>
+<script>
+export default {
+    mounted() {
+        let bar = document.querySelectorAll(".bar");
+        let skill = document.querySelector(".skills");
+        let top = skill.offsetTop;
+        if (window.scrollY >= 0) {
+            console.log("========");
+            for (let i = 0; i < bar.length; i++) {
+                bar[i].classList.add("action");
+            }
+        } else {
+            document.addEventListener("scroll", () => {
+                if (window.scrollY >= top - 100 && window.innerWidth <= 834) {
+                    bar[i].classList.add("action");
+                }
+            });
+        }
+    },
+};
+</script>
 <style scoped>
 p {
     font-size: 18px;
@@ -200,68 +221,71 @@ p {
     background-position: center center;
     background-repeat: no-repeat;
 }
-.css .bar {
+.css .bar.action {
     width: 90%;
     animation-name: progressing_90;
     animation-duration: 2s;
     animation-duration: leaner;
     animation-iteration-count: 1;
 }
-.js .bar {
+.js .bar.action {
     width: 80%;
     animation-name: progressing_80;
     animation-duration: 2s;
     animation-duration: leaner;
     animation-iteration-count: 1;
 }
-.html .bar {
+.html .bar.action {
     width: 95%;
     animation-name: progressing_95;
     animation-duration: 2s;
     animation-duration: leaner;
     animation-iteration-count: 1;
 }
-.node .bar {
+.node .bar.action {
     width: 75%;
     animation-name: progressing_75;
     animation-duration: 2s;
     animation-duration: leaner;
     animation-iteration-count: 1;
 }
-.vue .bar {
+.vue .bar.action {
     width: 75%;
     animation-name: progressing_75;
     animation-duration: 2s;
     animation-duration: leaner;
     animation-iteration-count: 1;
 }
-.jQuery .bar {
+.jQuery .bar.action {
     width: 80%;
     animation-name: progressing_80;
     animation-duration: 2s;
     animation-duration: leaner;
     animation-iteration-count: 1;
 }
-.ai .bar {
+.ai .bar.action {
     width: 95%;
     animation-name: progressing_95;
     animation-duration: 2s;
     animation-duration: leaner;
     animation-iteration-count: 1;
 }
-.ps .bar {
+.ps .bar.action {
     width: 80%;
     animation-name: progressing_80;
     animation-duration: 2s;
     animation-duration: leaner;
     animation-iteration-count: 1;
 }
-.language .bar {
+.language .bar.action {
     width: 95%;
     animation-name: progressing_95;
     animation-duration: 2s;
     animation-duration: leaner;
     animation-iteration-count: 1;
+}
+.progress_wrap .bar {
+    width: 10%;
 }
 @keyframes progressing_95 {
     from {
@@ -293,6 +317,73 @@ p {
     }
     to {
         width: 75%;
+    }
+}
+@media (max-width: 834px) {
+    .skills {
+        flex-wrap: wrap;
+
+        gap: 20px;
+        /* background-color: lightblue; */
+    }
+    .skills > div {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        flex: none;
+        width: 100%;
+    }
+    .skills p.en.bold {
+        margin-bottom: 15px;
+    }
+    .progress_wrap {
+        width: 100%;
+        height: 15px;
+        background-color: #fff;
+        border-radius: 10px;
+    }
+    .bar > div {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 30px;
+    }
+}
+@media (max-width: 450px) {
+    p {
+        font-size: 14px;
+    }
+    .skills {
+        flex-wrap: wrap;
+
+        gap: 15px;
+        /* background-color: lightblue; */
+    }
+    .skills > div {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        flex: none;
+        width: 100%;
+    }
+    .skills p.en.bold {
+        margin-bottom: 10px;
+    }
+    .progress_wrap {
+        width: 100%;
+        height: 11px;
+        background-color: #fff;
+        border-radius: 10px;
+    }
+    .bar > div {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 24px;
+        height: 24px;
     }
 }
 </style>

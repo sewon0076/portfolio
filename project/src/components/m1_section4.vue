@@ -95,8 +95,6 @@ export default {
             const sec4_0 = document.querySelectorAll(".section4 .sec_wrap>.b_gray");
             const lists = document.querySelectorAll(".list");
             const sec4 = sec4_0[0];
-            console.log("0" + lists[0].offsetTop - 100);
-            console.log("1" + lists[1].offsetTop - 100);
             if (window.scrollY >= sec4.offsetTop) {
                 this.change = true;
             } else {
